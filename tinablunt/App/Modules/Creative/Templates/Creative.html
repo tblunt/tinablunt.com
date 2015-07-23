@@ -1,0 +1,22 @@
+﻿<div class="creative container">
+    <div class="row">
+        <h5 class="ingress">Jag älskar att sy. Lite i perioder dock, mitt craving till symaskinen kommer och går liksom. Det brukar gå väldigt tydligt hand i hand med när jag har ägnat mig åt mycket tekniskt på jobbet. På något sätt ligger min kreativa nerv och rycker och känner sig bortglömd då.</h5>
+    </div>
+    <div clothes>
+        <div class="row"
+             ng-repeat="collection in imgData">
+            <div class="collection-header">
+                <h4>{{collection.collection}}</h4>
+            </div>
+            <div class="col-xs-6 img-thumb"
+                 ng-repeat="img in collection.images"
+                 ng-class="{'col-md-6': selectedImageSrc == img.src, 'col-md-3': selectedImageSrc != img.src}"
+                 ng-click="setSelectedImage(img.src)">
+                <img ng-src="{{img.src}}" />
+                <div class="caption">
+                    <p>{{img.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

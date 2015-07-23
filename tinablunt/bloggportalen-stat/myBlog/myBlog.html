@@ -1,0 +1,62 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <meta http-equiv="content-script-type" content="text/javascript">
+	<title>Main</title>
+	<script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
+	<script type="text/javascript" src="../Delat/d3-package/d3.v2.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../Delat/layout.css">
+</head>
+
+<body>
+	<div id="visBody">
+		<script type="text/javascript" src="../Delat/measureHandler.js"></script>
+		<script type="text/javascript" src="../Delat/colorValues.js"></script>
+		<script type="text/javascript" src="../Delat/dataHandeler.js"></script>
+		<script type="text/javascript" src="../Delat/menyBar.js"></script>
+			
+			<script type="text/javascript" src="blogStats.js"></script>
+
+			<script type="text/javascript" src="../Main/mouseOverEvents.js"></script>
+			<script type="text/javascript">
+						
+						//här vill jag kunna getta info om userns blog och hur den gått över tid.
+						//olika tidsintervaller osv.
+						var timeObject = new timeDataObject(2007);
+						var m = new measureObject2();
+						var c = new colorValues();
+						drawDivs_2(m,c);
+			
+						var menu = menyBar(2);
+						
+						var dir = 0;
+						var visits = [];
+						var avg_month_visits = [];
+						var avg_day_visits = [];
+						var timeData = getTimeData();
+						for(i=0;i<timeObject.nrOfItems;i++){
+							visits.push(timeData[i].visitors);
+							avg_month_visits.push(timeData[i].avgMonthVisitors);
+							avg_day_visits.push(timeData[i].avgDayVisitors);
+						}
+						
+						timeObject = calculate_max(timeObject,visits,avg_month_visits,avg_day_visits,blog_posts);
+						
+						//ritar alla objekt
+						var timeDiagram = new timeDiagram(timeObject,avg_day_visits,avg_month_visits,visits);
+						var slider = new slider(timeDiagram,timeObject,avg_day_visits);
+						
+						var displayer = new displayInfo(timeObject,visits[timeObject.selectedIndex],avg_month_visits[timeObject.selectedIndex],avg_day_visits[timeObject.selectedIndex],blog_posts[timeObject.selectedIndex],monthly_blog_posts,dir,2,0,0);
+						displayer.drawInfoArrows();
+						displayer.drawArrowText(timeObject.selectedIndex);
+						
+						//tar hand om alla event i de ritade objekten
+						//det mesta interaktiva händer här.
+						eventHandler(timeObject,timeDiagram,slider,displayer,blog_posts);
+			</script>
+	</div>
+	
+</body>
+</html>
+

@@ -1,0 +1,372 @@
+/**************************Sidindelning*******************************************************************/
+@font-face{
+    font-family: "Museo100";
+    src: url(../Fonts/Museo100-Regular.otf) format("truetype");
+}
+
+@font-face{
+    font-family: "MuseoSans";
+    src: url(../Fonts/MuseoSans_1.otf) format("truetype");
+}
+
+@font-face{
+    font-family: "Museo300";
+    src: url(../Fonts/Museo300-Regular.otf) format("truetype");
+}
+
+@font-face{
+    font-family: "Museo500";
+    src: url(../Fonts/Museo500-Regular.otf) format("truetype");
+}
+
+@font-face{
+    font-family: "Museo700";
+    src: url(../Fonts/Museo700-Regular.otf) format("truetype");
+}
+
+@font-face{
+    font-family: "Museo900";
+    src: url(../Fonts/Museo900-Regular.otf) format("truetype");
+}
+
+@font-face{
+    font-family: "OpenSans_bold";
+    src: url(../Fonts/OpenSans-CondBold.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: "OpenSans_light";
+    src: url(../Fonts/OpenSans-CondLight.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: "OpenSans_lightItalic";
+    src: url(../Fonts/OpenSans-CondLightItalic.ttf) format("truetype");
+}
+
+#visBody{
+		position:absolute;
+		font-family: "Museo500",helvetica;
+		font-size: 12pt;
+		margin: 0px;
+		padding: 0px;
+		color:black;
+		
+		user-select: none;
+	   -o-user-select:none;
+	   -moz-user-select: none;
+	   -khtml-user-select: none;
+	   -webkit-user-select: none;
+}
+
+
+/***************************TextLayout********************************************************/
+h2{
+	color: white;
+	font-size:20pt;
+	margin:0em;
+	padding:0em;
+	margin-top:2%;
+	margin-left:10%;
+	height:8%;
+	width:70%;
+}
+
+h1#introtext{
+	position:absolute;
+	font-size:20pt;
+	top:25%;
+	left:10%;
+}
+p{
+	font-size:12pt;
+}
+
+p#introtext{
+	position:absolute;
+	top:35%;
+	left:10%;
+	font-size:16pt;
+}
+
+
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+
+li.selected{
+	background-color:#5ECDD9;
+}
+
+/***************************Main********************************************************/
+
+/*tableLens*/
+#chart1{
+	font-size:10pt;
+	position:absolute; 
+}
+#background{
+	position:absolute;
+	z-index:0;
+}
+
+#filterHolder{	
+	position:absolute; 
+
+}
+
+#switchHolder{
+	position:absolute; 
+	z-index:100;
+}
+
+#disable{
+	position:absolute; 
+	z-index:1000;
+}
+
+
+#blogglabel2{
+	font-size:9pt;
+	color: white;
+}
+
+#blogglabel3{
+	font-size:7pt;
+	color: white;
+}
+
+/*cirlcle Diagram*/
+#chart2{
+	position:absolute; 
+	font-size: 10pt;
+}
+
+p#compareGraph{
+	position:absolute;
+
+}
+#errorSvg{
+	position:absolute; 
+}
+#errorText{
+	color:red;
+	font-size:7pt;
+}
+
+#svg2{
+	position:absolute;
+}
+
+#toggleDiv{
+	position:absolute; 
+	right:0%;
+	top:0%;
+	width:20%;
+	height:30%;
+}
+
+/*Scatterplot*/
+#chart3{
+	position:absolute; 
+	font-size: 10pt;
+
+}
+#label{
+	position:absolute;
+	font-size:20pt;
+	left:50%;
+	top:17%;
+	color:white;
+}
+
+#circleLine{
+	z-index:10;
+}
+
+#circleLabel{
+	position:absolute; 
+	width:70%; 
+	height: 20%; 
+	top:0em; 
+	left:0em; 
+}
+
+#circleValues{
+	position:absolute; 
+	width:100%; 
+	height: 20%; 
+	bottom:10%; 
+	left:0em; 
+	color:blue;
+
+}
+
+
+
+.axis path, .axis line{
+  position:absolute;
+  fill: none;
+  stroke: gray;
+  stroke-width: 1px;
+  left:0%;
+  top:0%;
+}
+
+.axis text{
+  fill: gray;
+  stroke: none;
+  stroke-width: 1px;
+  font-size:7pt;
+  color:white;
+}
+
+.barAxis path, .barAxis line{
+  position:absolute;
+  fill: none;
+  stroke: gray;
+  stroke-width: 2px;
+  left:0%;
+  top:0%;
+}
+
+
+.barAxis text{
+  fill: gray;
+  /*stroke: gray;
+  stroke-width: 1px;*/
+  font-size:7pt;
+  color:white;
+}
+
+
+
+/***************************My Blog********************************************************/
+/*timeDiagram*/
+#chart4{
+	position:absolute; 
+	z-index:100;
+}
+
+#timeDiagramCont{
+	position:absolute;
+}
+
+/*infoDisplay*/
+#chart5{
+	position:absolute; 
+	z-index:1;
+}
+
+#buttonSvg{
+	width:100%;
+}
+
+#geoDiv{
+	position: absolute;
+}
+
+#mouseDiv{
+	position: absolute;
+
+}
+
+#geoSvg{
+	position:absolute;
+}
+
+#rightSvg{
+	position:absolute;
+	right:0%;
+}
+#leftSvg{
+	position:absolute;
+	left:0%;
+}
+
+#termoSvg{
+	position:absolute;
+
+}
+
+#timeDiagramCont {
+	width:100%;
+}
+
+#sliderDiv{
+	position:absolute; 
+	z-index:100;
+}
+
+#sliderContainer{
+	position:absolute; 
+	width:100%;
+	height:100%;
+	left:0%;
+	bottom:0%;
+}
+
+
+#infoVis{
+	position:absolute;
+}
+
+#bloggCircLbl{
+	font-size:18pt;
+}
+
+line.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
+}
+
+#monthRect{
+	font-size:8pt;
+}
+
+#infoSvg{
+	position:absolute;
+	right:10%;
+	top:10%;
+}
+
+#textSvg{
+	position:absolute;
+}
+
+/*för att inte texten ska markeras i månadsCirklarna*/
+.no-select
+{
+   user-select: none;
+   -o-user-select:none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+
+path.area {
+  stroke: none;
+  fill: url(#fade);
+}
+.textDiv{
+	width:600px;
+	padding-top:8%;
+	margin: 0 auto;
+}
+.infop{
+    font-family:Georgia,serif;
+    text-align:center;
+	width:600px;
+	padding:10px;
+	margin:20px;
+}
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+﻿@import "../../../Styles/Shared/_Colors";
+social {
+    .img-container {
+        padding-bottom:15px;
+        padding-top:15px;
+        vertical-align:top;
+        position:relative;
+          -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+          transition: all 0.5s;
+
+        img {
+            max-width:100%;
+        }
+        .caption {
+            display:none;
+            background:@background_blue;
+            padding:1rem;
+            width:70%;
+            position:absolute;
+            bottom:0;
+            text-align:left;
+                p {
+                    font-size:1.4rem;
+                }
+                .date {
+                    color:@accent_red;
+                    opacity:0.8;
+                }
+        }
+
+        &:hover {
+            .caption {
+                display:block;
+            }
+        }
+    }
+    
+}

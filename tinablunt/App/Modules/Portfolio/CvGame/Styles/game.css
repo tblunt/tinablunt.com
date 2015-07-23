@@ -1,0 +1,154 @@
+﻿.game .container {
+    font-family: 'Muli', sans-serif;
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+}
+
+.game .main {
+    position:relative;
+    width:1009px;
+    min-height:400px;
+    padding-top:130px;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+.game #gameCanvas {
+    position:relative;
+    height:400px;
+    overflow-x:hidden;
+    border:5px solid #efefef;
+    width:1000px;
+}
+
+.game .itemInfo {
+    position:absolute;
+    top:140px;
+    left:3%;
+    font-size:9pt;
+    min-width:100px;
+    padding:10px;
+    background-color:#141c24;
+    text-align:center;
+}
+
+.game .infoHeader {
+    font-size:14pt;
+    color:#f3ae73;
+    border-bottom:3px solid white;
+    margin-bottom:5px;
+}
+
+.game .infoUnderHeader {
+    font-family:Georgia;
+    font-size:9pt;
+    margin:0;
+    font-weight:bold;
+    width:250px;
+}
+
+.game .infoBread {
+    color:#808080;
+    font-family:'Muli', sans-serif;
+    width:200px;
+    text-align:center;
+    display:inline-block;
+}
+
+.game .coinInfo {
+    position:absolute;
+    top:140px;
+    right:3%;
+    min-width:100px;
+    padding:10px;
+    background-color:#141c24;
+    width:220px;
+  
+}
+
+.game .coinInfo li{
+   text-decoration:none;
+   font-size:9pt;
+   list-style:none;
+   margin:5px 0 0 5px;
+}
+
+.game .infoImg {
+    position:absolute;
+    left:10%;
+    top:70px;
+}
+
+.game .coinImg {
+    position:absolute;
+    right:10%;
+    top:70px;
+}
+
+.game .fail {
+    position: absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    top:200px;
+    color:#b5b5b5;
+}
+
+.game .clickinfo {
+    position: absolute;
+    width:100%;
+    text-align:center;
+    top:250px;
+}
+.game .failText {
+    font-size:50pt;
+}
+
+.game .restartText {
+    position:absolute;
+    left:30%;
+    top:45%;
+}
+
+.game .restart {
+    position:absolute;
+    left:37%;
+    top:55%;
+    color:black;
+    text-decoration:none;
+    font-size:25pt;
+    background-color:#efefef;
+    padding:20px;
+    margin-top:20px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.game .cvLinks{
+    display:inline-block;
+    margin:20px 0 0 0;
+    width:100%;
+    text-align:center;
+}
+
+.game .cvLinks a{
+    font-size:11px;
+    font-style:italic;
+}
+.showOnPhone{
+    display:none;
+}
+
+
+@media(max-width: 700px) {
+    
+
+.hideOnPhone{
+    display:none;
+}
+.showOnPhone{
+    display:block;
+}
+}

@@ -1,0 +1,51 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <meta http-equiv="content-script-type" content="text/javascript">
+	<title>Main</title>
+	<script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../Delat/layout.css">
+</head>
+
+<body>
+	
+	<div id="visBody">
+	
+		<script type="text/javascript" src="../Delat/menyBar.js"></script>
+		<script type="text/javascript" src="../Delat/measureHandler.js"></script>
+		<script type="text/javascript" src="../Main/mouseOverEvents.js"></script>
+	
+		<script type="text/javascript">
+		
+		var m = new measureObject2();
+		
+		d3.select("#visBody")
+				.style("width", m.width)
+				.style("height", m.height)
+				.style("top", m.top)
+				.append("div")
+				.attr("id","background")
+				.style("width", m.width)
+				.style("height", m.height);
+				
+		var menu = menyBar(3);
+		var txtDiv = d3.select("#visBody")
+						.append("div")
+						.attr("class", "textDiv");	
+		txtDiv
+			.append("p")
+			.attr("class", "infop")
+			.text("Utvecklat av Tina Durmén Blunt för Twingly AB och Bloggportalen.se. Projektet gjordes inom ett examensarbete i Medieteknik på Linköpings universitet.");
+		
+		txtDiv
+			.append("p")
+			.attr("class", "infop")
+			.text("Detta är en demoversion av den som kommer publiceras på Bloggportalen senare. Därav är inte korrekt data integrerat då syftet här enbart är att visa upp funktionaliteten för applikationen.");
+			
+	</script>
+	
+
+</body>
+</html>
+

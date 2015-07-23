@@ -1,0 +1,17 @@
+﻿<div class="container">
+    <div ng-repeat="imgObject in instaImages" 
+         class="img-container" 
+         ng-class="{'col-md-6': selectedImageId == imgObject.id, 'col-md-3': selectedImageId != imgObject.id}"
+         ng-click="setSelectedImage(imgObject.id)">
+        <img ng-src="{{imgObject.images.standard_resolution.url}}" />
+        <div class="caption">
+            <p>
+                {{imgObject.caption.text}}
+            </p>
+            <p class="date">
+                {{getDate(imgObject.created_time)}}
+            </p>
+
+        </div>
+    </div>
+</div>

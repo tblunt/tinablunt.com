@@ -1,0 +1,17 @@
+﻿<div career-log class="container career-log">
+    <div ng-repeat="item in careerLogData" class="news-item row">
+        <div class="img-wrapper col-xs-12 col-sm-5"
+             ng-show="item.img.length != 0">
+
+            <img ng-src="{{img}}" ng-class="{'col-xs-12': item.img.length >= 1}"
+                 ng-repeat="img in item.img" />
+        </div>
+        <div class="col-xs-12 content-wrapper" ng-class="{'col-sm-7':item.img.length >= 1, 'col-sm-12':item.img.length == 0}">
+            <h2>{{item.header}}</h2>
+            <h5>{{item.date}}</h5>
+            <p ng-bind-html="item.content"></p>
+            <a href="{{item.link}}" target="_blank">{{item.link}}</a>
+        </div>
+
+    </div>
+</div>

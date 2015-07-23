@@ -1,0 +1,179 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <meta http-equiv="content-script-type" content="text/javascript">
+	<title>Main</title>
+	<script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
+	<script type="text/javascript" src="../Delat/d3-package/d3.v2.js"></script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../Delat/layout.css">
+	
+	
+</head>
+
+<body>
+<div id="visBody">
+	
+	<script type="text/javascript" src="TableLens.js"></script>
+	<script type="text/javascript" src="tableLens2.js"></script>
+	<script type="text/javascript" src="circleDiagram.js"></script>
+	<script type="text/javascript" src="scatterPlot.js"></script>
+	<script type="text/javascript" src="scatterPlot2.js"></script>
+	<script type="text/javascript" src="init.js"></script>
+	<script type="text/javascript" src="switchen.js"></script>
+	<script type="text/javascript" src="clickHandler.js"></script>
+	<script type="text/javascript" src="filter.js"></script>
+	<script type="text/javascript" src="drawDivs.js"></script>
+	<script type="text/javascript" src="mouseOverEvents.js"></script>
+	
+	
+	<script type="text/javascript" src="../Delat/measureHandler.js"></script>
+	<script type="text/javascript" src="../Delat/colorValues.js"></script>
+	<script type="text/javascript" src="../Delat/dataHandeler.js"></script>
+	<script type="text/javascript" src="../Delat/menyBar.js"></script>
+	<script type="text/javascript" src="../Delat/jsonVariabler.js"></script>
+	<script type="text/javascript" src="../Delat/commaAdder.js"></script>
+
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		var c = new colorValues();
+		var m = new measureObject();
+		var d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0];
+		m.width = (g.clientWidth)*0.97;
+		
+		drawDivs(m,c);
+		var menu = menyBar(1);
+		
+		var jsonObject = new dataObject();
+		jsonObject.userName = "http://peterblaha.myshowroom.se/";
+		jsonObject.userId = 127602;
+		
+		var theSwitch = new switchen();
+		theSwitch.r.on("mousedown", mouseDownEvent);
+		theSwitch.sw.on("mousedown", mouseDownEvent);
+		
+		//filterValues[0] = top100selected, filterValues[1] = filterType
+		filterValues = [0,0];
+		filter(jsonObject,filterValues);
+		
+		var finished = 0;
+		//laddar data och ritar graferna
+		finished = setFilterURL_and_init(jsonObject,filterValues);
+		
+		
+		//************************************************************************************
+		//*******************************
+		
+		function redraw_top100(){
+			//deleteAll();
+
+			var jsonObject = new dataObject();
+
+			//laddar data och ritar graferna
+			setFilterURL_and_init(jsonObject,filterValues);
+		};
+		
+		function redraw_me(){
+			//deleteAll();
+			
+			var jsonObject = new dataObject();
+			jsonObject.userName = "http://peterblaha.myshowroom.se/";
+			jsonObject.userId = 127602;
+		
+			//laddar data och ritar graferna
+			setFilterURL_and_init(jsonObject,filterValues);
+		};
+		
+		
+		function mouseDownEvent(){
+			var width = theSwitch.width;
+			var switchContWidth = theSwitch.switchContWidth;
+			
+			if(theSwitch.theSwitchLeft == 0){
+				theSwitch.theSwitchLeft = 1;
+				filterValues[0] = 0;
+				
+				theSwitch.sw
+					.transition()
+					.delay(0)
+					.duration(200)
+					.attr("x", width*0.2 + switchContWidth*0.25);
+					
+				
+				theSwitch.text1.attr("fill", "gray");	
+				theSwitch.text2.attr("fill", c.color(0.1));	
+				
+				redraw_me();
+				
+			}
+			else{
+				theSwitch.theSwitchLeft = 0;
+				filterValues[0] = 1;
+				theSwitch.sw
+					.transition()
+					.delay(0)
+					.duration(200)
+					.attr("x", width*0.2);
+
+				theSwitch.text2.attr("fill", "gray");	
+				theSwitch.text1.attr("fill", c.color(0.6));	
+				
+				redraw_top100();
+			}
+	
+	};
+
+	});//window
+	
+	function deleteAll(){
+			d3.select("#chart1")
+				.selectAll("svg")
+				.remove();
+				
+			d3.select("#chart2")
+				.selectAll("svg")
+				.remove();
+				
+			d3.select("#chart2")
+				.selectAll("h1")
+				.remove();
+				
+			d3.select("#chart2")
+				.selectAll("u1")
+				.remove();
+				
+			d3.select("#chart2")
+				.selectAll("p")
+				.remove();
+				
+			d3.select("#chart3")
+				.selectAll("svg")
+				.remove();
+				
+			/*d3.select("#filterHolder")
+				.selectAll("svg")
+				.remove();*/
+		};
+
+		
+	
+</script>
+</div>	
+      <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-43724495-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function () {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+﻿<h1 class="siteheader">Välkommen till tinablunt.com</h1>
+<div class="navitem color_{{navitem.color}}"
+     ng-repeat="navitem in navItemData"
+     ng-click="navitemClicked(navitem)"
+     ng-class="{'active': isActiveNavItem(navitem.id)}">
+    <img class="icon" ng-src="App/Modules/Header/Content/{{navitem.icon}}.svg" />
+    <img class="whiteicon" ng-src="App/Modules/Header/Content/{{navitem.icon}}_w.svg" />
+    <p class="nav-label">{{navitem.title}}</p>
+</div>
+
+<div class="sub-view-header color_{{navitem.color}}"
+     ng-repeat="navitem in navItemData"
+     ng-show="isActiveNavItem(navitem.id)">
+    <h1>{{navitem.title}}</h1>
+    <div class="navitem"
+         ng-if="navitem.subviews"
+         ng-repeat="subview in navitem.subviews"
+         ng-click="navSubitemClick(subview, navitem)">
+        <img ng-src="App/Modules/Header/Content/{{subview.icon}}.svg" />
+        <p>{{subview.title}}</p>
+    </div>
+</div>
+
+

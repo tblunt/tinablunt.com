@@ -1,0 +1,8 @@
+*.py[col]
+bin
+var
+*.egg
+*.egg-info
+venv
+*.pid
+database.yaml

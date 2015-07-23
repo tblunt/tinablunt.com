@@ -1,0 +1,128 @@
+﻿@import "../../../Styles/Shared/_Colors";
+
+.specific_colors(@color) {
+    & h1 {
+        color:@color;
+    }
+}
+
+header {
+    display:block;   
+    text-align:center;
+    width:100%;
+
+    .siteheader {
+        font-weight:300;
+        font-size:2.5rem;
+        text-transform:uppercase;
+        margin-top:200px;
+        margin-bottom:50px;
+        -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+          transition: all 0.5s;
+    }
+
+    .navitem {
+         display:inline-block;
+         cursor:pointer;
+         opacity:0.9;
+         vertical-align:top;
+
+         .icon {
+             display:none;
+         }
+
+         .whiteicon {
+             display:block;
+         }
+
+         &:hover, &.active {
+            opacity:1;
+
+            .whiteicon {
+                 display:none;
+             }
+            .icon {
+                 display:block;
+             }
+        }
+    }
+    img {
+        display:inline-block;
+        height:150px;
+        width:150px;
+        margin:1rem;
+        -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: all 0.5s;
+    }
+    p {
+        display:block;
+        margin:0;
+        font-size:1.5rem;
+    }
+
+     &.active {
+        
+        .siteheader {
+          margin-top:0;
+          margin-bottom:0;
+          height:0;
+          opacity:0;
+          font-size:0;
+          -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+          transition: all 0.5s;
+        }
+        img {
+            height:70px;
+            width:70px;
+             -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+          transition: all 0.5s;
+        }
+        .nav-label {
+            display:none;
+        }
+    }
+}
+
+.sub-view-header {
+    background:rgba(255,255,255,0.1);
+    padding:1rem 0;
+    margin:1rem 0;
+     h1 {
+        margin:0;
+        vertical-align:middle;
+    }
+    .navitem{
+        padding:2rem 2rem 0 2rem;
+        vertical-align:middle;
+
+        img {
+            height:40px;
+            width:40px;
+            margin:0;
+            display:inline-block;
+            vertical-align:middle;
+
+        }
+        p {
+            display:inline-block;
+            vertical-align:middle;
+        }
+    }
+    
+}
+
+.color_green {
+    .specific_colors(@accent_green);
+}
+
+.color_turkois {
+    .specific_colors(@accent_turkois);
+}
+
+.color_red {
+    .specific_colors(@accent_red);
+}
+
+.color_orange {
+    .specific_colors(@accent_orange);
+}

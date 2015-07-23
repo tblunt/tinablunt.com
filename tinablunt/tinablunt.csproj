@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17D71757-49B3-4518-BAAE-7C1DC047862F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tinablunt</RootNamespace>
+    <AssemblyName>tinablunt</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bloggportalen-stat\About\about.html" />
+    <Content Include="bloggportalen-stat\bilder\active_arrow.png" />
+    <Content Include="bloggportalen-stat\bilder\active_selector.png" />
+    <Content Include="bloggportalen-stat\bilder\graftoggle_in.png" />
+    <Content Include="bloggportalen-stat\bilder\graftoggle_out.png" />
+    <Content Include="bloggportalen-stat\bilder\jamfor_in.png" />
+    <Content Include="bloggportalen-stat\bilder\jamfor_out.png" />
+    <Content Include="bloggportalen-stat\bilder\nub.png" />
+    <Content Include="bloggportalen-stat\bilder\nub_bg.png" />
+    <Content Include="bloggportalen-stat\bilder\om_in.png" />
+    <Content Include="bloggportalen-stat\bilder\om_ut.png" />
+    <Content Include="bloggportalen-stat\bilder\radio_off.png" />
+    <Content Include="bloggportalen-stat\bilder\radio_on.png" />
+    <Content Include="bloggportalen-stat\bilder\statistik_in.png" />
+    <Content Include="bloggportalen-stat\bilder\statistik_out.png" />
+    <Content Include="bloggportalen-stat\bilder\stats_fonts.jpg" />
+    <Content Include="bloggportalen-stat\bilder\tolkar_in.png" />
+    <Content Include="bloggportalen-stat\bilder\tolkar_out.png" />
+    <Content Include="bloggportalen-stat\Database\.gitignore" />
+    <Content Include="bloggportalen-stat\Database\requirements.txt" />
+    <Content Include="bloggportalen-stat\Delat\colorValues.js" />
+    <Content Include="bloggportalen-stat\Delat\commaAdder.js" />
+    <Content Include="bloggportalen-stat\Delat\d3-package\d3.v2.js" />
+    <Content Include="bloggportalen-stat\Delat\dataHandeler.js" />
+    <Content Include="bloggportalen-stat\Delat\jsonVariabler.js" />
+    <Content Include="bloggportalen-stat\Delat\layout.css" />
+    <Content Include="bloggportalen-stat\Delat\measureHandler.js" />
+    <Content Include="bloggportalen-stat\Delat\menyBar.js" />
+    <Content Include="bloggportalen-stat\Help\help.html" />
+    <Content Include="bloggportalen-stat\Main\circleDiagram.js" />
+    <Content Include="bloggportalen-stat\Main\cirklar.js" />
+    <Content Include="bloggportalen-stat\Main\clickHandler.js" />
+    <Content Include="bloggportalen-stat\Main\drawDivs.js" />
+    <Content Include="bloggportalen-stat\Main\filter.js" />
+    <Content Include="bloggportalen-stat\Main\init.js" />
+    <Content Include="bloggportalen-stat\Main\main.html" />
+    <Content Include="bloggportalen-stat\Main\mouseOverEvents.js" />
+    <Content Include="bloggportalen-stat\Main\scatterPlot.js" />
+    <Content Include="bloggportalen-stat\Main\scatterPlot2.js" />
+    <Content Include="bloggportalen-stat\Main\switchen.js" />
+    <Content Include="bloggportalen-stat\Main\TableLens.js" />
+    <Content Include="bloggportalen-stat\Main\tableLens2.js" />
+    <Content Include="bloggportalen-stat\myBlog\blogStats.js" />
+    <Content Include="bloggportalen-stat\myBlog\blog_posts.js" />
+    <Content Include="bloggportalen-stat\myBlog\calculateMax.js" />
+    <Content Include="bloggportalen-stat\myBlog\commaAdder.js" />
+    <Content Include="bloggportalen-stat\myBlog\displayInfo.js" />
+    <Content Include="bloggportalen-stat\myBlog\display_month_blogposts.js" />
+    <Content Include="bloggportalen-stat\myBlog\drawDivs_2.js" />
+    <Content Include="bloggportalen-stat\myBlog\drawTermo.js" />
+    <Content Include="bloggportalen-stat\myBlog\eventHandler.js" />
+    <Content Include="bloggportalen-stat\myBlog\geo.js" />
+    <Content Include="bloggportalen-stat\myBlog\Images\arrow_left.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\arrow_right.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\blog_circle.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\leftbutton_off.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\leftbutton_on.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\rightbutton_off.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\rightbutton_on.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\slider.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\temp_blue.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\temp_orange.png" />
+    <Content Include="bloggportalen-stat\myBlog\Images\temp_purple.png" />
+    <Content Include="bloggportalen-stat\myBlog\monthCircle.js" />
+    <Content Include="bloggportalen-stat\myBlog\monthCircle2.js" />
+    <Content Include="bloggportalen-stat\myBlog\myBlog.html" />
+    <Content Include="bloggportalen-stat\myBlog\sliderObject.js" />
+    <Content Include="bloggportalen-stat\myBlog\stats_2.jpg" />
+    <Content Include="bloggportalen-stat\myBlog\timeCircle.js" />
+    <Content Include="bloggportalen-stat\myBlog\timeData.js" />
+    <Content Include="bloggportalen-stat\myBlog\timeDataObject.js" />
+    <Content Include="bloggportalen-stat\myBlog\timeDiagram.js" />
+    <Content Include="bloggportalen-stat\myBlog\treemap.js" />
+    <Content Include="bloggportalen-stat\myBlog\yearMonth.js" />
+    <Content Include="favicon.png" />
+    <Content Include="index.html" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_2785.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_3698.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_3702.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_3706.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_3709.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_3711.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_3715.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_3996.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4001.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4007.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4009.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4020.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4023.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4027.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4029.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4033.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4034.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4036.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4041.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4042.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4045.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4049.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4097.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_4103.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_5085.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_5087.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_5092.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_5096.JPG" />
+    <Content Include="App\Modules\Creative\Recept\Images\bread.svg" />
+    <Content Include="App\Modules\Creative\Recept\Images\dessert.svg" />
+    <Content Include="App\Modules\Creative\Recept\Images\food.svg" />
+    <Content Include="App\Modules\Creative\Recept\Images\soup.svg" />
+    <Content Include="App\Modules\Creative\Recept\Recept.html" />
+    <Content Include="App\Modules\Creative\Recept\Templates\ReceptList.html" />
+    <Content Include="App\Modules\Creative\Templates\Creative.html" />
+    <Content Include="App\Modules\Header\Content\art.svg" />
+    <Content Include="App\Modules\Header\Content\briefcase.svg" />
+    <Content Include="App\Modules\Header\Content\clothes.svg" />
+    <Content Include="App\Modules\Header\Content\creative.svg" />
+    <Content Include="App\Modules\Header\Content\creative_w.svg" />
+    <Content Include="App\Modules\Header\Content\cv.svg" />
+    <Content Include="App\Modules\Header\Content\food.svg" />
+    <Content Include="App\Modules\Header\Content\portfolio.svg" />
+    <Content Include="App\Modules\Header\Content\portfolio2.svg" />
+    <Content Include="App\Modules\Header\Content\portfolio2_w.svg" />
+    <Content Include="App\Modules\Header\Content\project.svg" />
+    <Content Include="App\Modules\Header\Content\social.svg" />
+    <Content Include="App\Modules\Header\Content\social_w.svg" />
+    <Content Include="App\Modules\Header\Content\study.svg" />
+    <Content Include="App\Modules\Header\Content\welcome.svg" />
+    <Content Include="App\Modules\Header\Content\welcome_w.svg" />
+    <Content Include="App\Modules\Header\Templates\Header.html" />
+    <Content Include="App\Modules\Hej\Content\contact.svg" />
+    <Content Include="App\Modules\Hej\Content\hi.svg" />
+    <Content Include="App\Modules\Hej\Content\study.svg" />
+    <Content Include="App\Modules\Hej\Content\tina.jpg" />
+    <Content Include="App\Modules\Hej\Content\work.svg" />
+    <Content Include="App\Modules\Hej\Templates\Hej.html" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\164448_610506170404_1819102998_n.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\18443d0ce78a11e181ca12313b027e41_6.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\4062.unity3d1.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\51ddd87c92c311e2a77722000a1fbc49_6.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\8f278944138e11e2917a22000a1de2d1_6.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\alltblirgronare1.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\alltblirgronare2.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\alltblirgronare3.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\alumni.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\b3eae53a828511e28bf022000a9f139a_6.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Cheer_banner_start.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\codeHub.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\dfe738489d3b11e2b7ba22000aaa2161_6.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\effekt.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Exxact_Brushed.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Exxact_Glass_Black4.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Exxact_Glass_Red.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\gaia.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\gaia.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\IMG_20131025_010813.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\IMG_20131120_150736.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\IMG_20140117_092645.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\moistguard.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\moistguard2.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\MTD1.JPG" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\MTD2.JPG" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\MTD3.JPG" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Renova_Silver.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\t80beiwdzncfreg59qtf.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\umbraco-logo.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\umbraco.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\unity.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\unity2.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\vxkq.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Templates\CareerLog.html" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bitmap.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\blog1.jpg" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok1.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok10.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok11.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok12.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok13.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok14.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok15.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok16.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok17.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok18.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok19.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok2.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok3.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok4.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok5.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok6.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok7.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok8.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok9.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\erf.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\KUNS.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\map.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\MonsterAIdle.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\MonsterAIdle2.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\MonsterAIdle3.PNG" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\MonsterARun.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\MonsteSprite.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\mYerA.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\spinning_coin_gold.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\tenta.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\upright-finish-line-flag-hi.png" />
+    <Content Include="App\Modules\Portfolio\CvGame\js\animateGubbe.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\js\cvData.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\js\easeljs-0.6.0.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\js\monster.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\js\ng-cvGame.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\js\spinningCoin.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\bootstrap.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\console.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\d3.v3.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\d3.v3.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\Inheritance.js" />
+    <None Include="App\Modules\Portfolio\CvGame\Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery-1.7.1.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery-1.7.1.min.js" />
+    <None Include="App\Modules\Portfolio\CvGame\Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery-1.8.2.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery-1.8.2.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.flexslider-min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.isotope.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.mobile-1.1.0.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.mobile-1.1.0.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="App\Modules\Portfolio\CvGame\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.validate.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.validate.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\knockout-2.1.0.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\knockout-2.2.0.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\modernizr-2.5.3.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\modernizr-2.6.2.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\r2d3.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\rAF.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Scripts\three.min.js" />
+    <None Include="App\Modules\Portfolio\CvGame\Scripts\_references.js" />
+    <Content Include="App\Modules\Portfolio\CvGame\Styles\game.css" />
+    <Content Include="App\Modules\Portfolio\CvGame\Template\cvGameTemplate.html" />
+    <Content Include="App\Modules\Portfolio\Education\Content\110913_LEO_Tina_0025.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\164036_10150126889000971_663490970_8478531_4353637_n.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\20.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\221790_10150185773562201_533537200_7281160_4615444_n.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\37718_428134417200_533537200_5170752_2208684_n.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\39082_432445227200_533537200_5292360_2457477_n.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\502738.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\9126_146136472200_3911258_n.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\affisch2.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\arrow_left.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\arrow_left_hover.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\arrow_left_sel.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\arrow_left_unsel.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\arrow_right.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\arrow_right_hover.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\arrow_right_sel.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\arrow_right_unsel.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\black.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\black1.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\black2.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\black3.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\black6.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\black8.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\blogcirk.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\bob0488.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\boundingbox.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ciin.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\CIMG2373.JPG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\computer_icon.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\flicka.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\helaprogram.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\icon.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\im8c.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\IMG_1151.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\instagram.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\instagram_hover.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\intensity_result.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\jorden.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\karta.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\karta1.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\karta_max_min.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\karta_min.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\klarr.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\laddar.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\linkedIn.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\linkedIn_hover.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\logga.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\Logga1.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\main.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\matte.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\medieteknik.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\meny.jpeg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\Mettemarket.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\MT.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\mt_thumb.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\myblog.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\noArrow.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\nollebok_png.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\P1010309.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\Parallellkoordinate_2004.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\play1.jpeg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\pojke.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\prickarochbalkar.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\query1_facit.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\render01.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\render02.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\scattermatrix.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\scatterplot.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\screenshot2.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\screenshot2_andra.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\screenshot2_ena.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\sida1.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\sida1_1.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\Sida2.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\sida2_1.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\sida2_2.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\sida2_3.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\sidan.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\sun.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\termo.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\3Cant.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\3d2.JPG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\3D_Thumb.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\abob.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\agil.JPG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\bdb.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\black.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\bob.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\ciin.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\computer_icon.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\concept.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\infoVis.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\isea.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\Mette.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\mt.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\MT2.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\sunset.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\thumb.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\torsten.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\twingly.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\ThumbNails\vargtass.PNG" />
+    <Content Include="App\Modules\Portfolio\Education\Content\tina1.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\tina_stor.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\torsten.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\twingly-logotype21.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\underbart.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\vagtass.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\vagtasshoger.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\vagtasshoger.png" />
+    <Content Include="App\Modules\Portfolio\Education\Content\vargtassvanster.jpg" />
+    <Content Include="App\Modules\Portfolio\Education\Content\vargtassvanster.png" />
+    <Content Include="App\Modules\Portfolio\Education\Scripts\EducationDirective.js" />
+    <Content Include="App\Modules\Portfolio\Education\Scripts\Inheritance.js" />
+    <Content Include="App\Modules\Portfolio\Education\Scripts\jquery.isotope.js" />
+    <Content Include="App\Modules\Portfolio\Education\Scripts\main.js" />
+    <Content Include="App\Modules\Portfolio\Education\Scripts\modernizr-2.6.2.js" />
+    <Content Include="App\Modules\Portfolio\Education\Scripts\news.js" />
+    <Content Include="App\Modules\Portfolio\Education\Scripts\newsData2.js" />
+    <Content Include="App\Modules\Portfolio\Education\Scripts\portfolio.js" />
+    <Content Include="App\Modules\Portfolio\Education\Styles\news.css" />
+    <Content Include="App\Modules\Portfolio\Education\Templates\Education.html" />
+    <Content Include="App\Modules\Portfolio\Education\Templates\IsotopeTemplate.html" />
+    <Content Include="App\Modules\Portfolio\Templates\Portfolio.html" />
+    <Content Include="App\Modules\Social\Templates\Social.html" />
+    <Content Include="App\Modules\Social\Templates\SocialTemplate.html" />
+    <None Include="App\_references.js" />
+    <Content Include="Styles\site.css" />
+    <Content Include="Styles\site.min.css" />
+    <Content Include="Vendor\angular-animate\angular-animate.js" />
+    <Content Include="Vendor\angular-animate\angular-animate.min.js" />
+    <Content Include="Vendor\angular-route\angular-route.js" />
+    <Content Include="Vendor\angular-route\angular-route.min.js" />
+    <Content Include="Vendor\angular\angular-sanitize.js" />
+    <Content Include="Vendor\angular\angular.js" />
+    <Content Include="Vendor\angular\angular.min.js" />
+    <Content Include="Vendor\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Vendor\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Vendor\bootstrap\js\npm.js" />
+    <Content Include="Vendor\jquery\jquery.min.js" />
+    <Content Include="Vendor\underscore\underscore-min.js" />
+    <Content Include="Vendor\underscore\underscore.js" />
+    <Content Include="Web.config" />
+    <None Include="Properties\PublishProfiles\Pub.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bloggportalen-stat\Database\bpapi.py" />
+    <Content Include="bloggportalen-stat\Database\db_functions.py" />
+    <Content Include="bloggportalen-stat\Database\deploy-production.sh" />
+    <Content Include="bloggportalen-stat\Database\model.py" />
+    <Content Include="bloggportalen-stat\Database\server.py" />
+    <Content Include="bloggportalen-stat\Fonts\Museo100-Regular.otf" />
+    <Content Include="bloggportalen-stat\Fonts\Museo300-Regular.otf" />
+    <Content Include="bloggportalen-stat\Fonts\Museo500-Regular.otf" />
+    <Content Include="bloggportalen-stat\Fonts\Museo700-Regular.otf" />
+    <Content Include="bloggportalen-stat\Fonts\Museo900-Regular.otf" />
+    <Content Include="bloggportalen-stat\Fonts\MuseoSans.otf" />
+    <Content Include="bloggportalen-stat\Fonts\MuseoSans_0.otf" />
+    <Content Include="bloggportalen-stat\Fonts\MuseoSans_1.otf" />
+    <Content Include="bloggportalen-stat\Fonts\MuseoSans_2.otf" />
+    <Content Include="bloggportalen-stat\Fonts\MuseoSans_3.otf" />
+    <Content Include="bloggportalen-stat\Fonts\OpenSans-CondBold.ttf" />
+    <Content Include="bloggportalen-stat\Fonts\OpenSans-CondLight.ttf" />
+    <Content Include="bloggportalen-stat\Fonts\OpenSans-CondLightItalic.ttf" />
+    <Content Include="bloggportalen-stat\Main\testJson2.json" />
+    <Content Include="bloggportalen-stat\myBlog\us-counties.json" />
+    <Content Include="bloggportalen-stat\myBlog\world-countries.json" />
+    <Content Include="App\Modules\Background\_Background.less" />
+    <Content Include="App\Modules\Creative\Content\Clothes\ps68F4.tmp" />
+    <Content Include="App\Modules\Creative\Recept\Styles\_Recept.less" />
+    <Content Include="App\Modules\Creative\Styles\_Creative.less" />
+    <Content Include="App\Modules\Header\Styles\_Header.less" />
+    <Content Include="App\Modules\Hej\Styles\_Hej.less" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Data\careerLogData.json" />
+    <Content Include="App\Modules\Portfolio\CareerLog\_Careerlog.less" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\bok.psd" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\labels.psd" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\map.PSD" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\MonsterAIdle2.psd" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\MonsterARun.psd" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\spinning_coin_gold.psd" />
+    <Content Include="App\Modules\Portfolio\CvGame\img\tenta.psd" />
+    <Content Include="App\Modules\Portfolio\CvGame\pdf\Tina_Durmen_Blunt_CV.pdf" />
+    <Content Include="App\Modules\Social\Styles\_Social.less" />
+    <Content Include="Styles\Shared\_Background.less" />
+    <Content Include="Styles\Shared\_Colors %28Konfliktkopia för GNONB104 2015-02-16%29.less" />
+    <Content Include="Styles\Shared\_Colors.less" />
+    <Content Include="Styles\Shared\_Layout.less" />
+    <Content Include="Styles\site.css.map" />
+    <Content Include="Styles\site.less" />
+    <Content Include="Vendor\angular-animate\angular-animate.min.js.map" />
+    <Content Include="Vendor\angular-route\angular-route.min.js.map" />
+    <Content Include="Vendor\angular\angular.min.js.map" />
+    <Content Include="Vendor\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Vendor\jquery\jquery.min.map" />
+    <Content Include="Vendor\underscore\underscore-min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="App\Modules\Background\BackgroundDirective.ts" />
+    <TypeScriptCompile Include="App\Modules\Creative\Recept\Scripts\ReceptDirective.ts" />
+    <TypeScriptCompile Include="App\Modules\Creative\Scripts\ClothesDirective.ts" />
+    <TypeScriptCompile Include="App\Modules\Header\Scripts\HeaderDirective.ts" />
+    <TypeScriptCompile Include="App\Modules\Portfolio\CareerLog\Scripts\CareerLogDirective.ts" />
+    <TypeScriptCompile Include="App\Modules\Social\Scripts\SocialDirective.ts" />
+    <TypeScriptCompile Include="App\Application.ts" />
+    <TypeScriptCompile Include="App\Contollers\MainController.ts" />
+    <TypeScriptCompile Include="App\Helpers\BaseDirective.ts" />
+    <TypeScriptCompile Include="App\Helpers\Mediator.ts" />
+    <TypeScriptCompile Include="App\Helpers\StringHelpers.ts" />
+    <TypeScriptCompile Include="App\Helpers\Type.ts" />
+    <TypeScriptCompile Include="App\Messages\IMessage.ts" />
+    <TypeScriptCompile Include="App\Messages\SetSelectedView.ts" />
+    <TypeScriptCompile Include="Vendor\DefinitelyTyped\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Vendor\DefinitelyTyped\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="Vendor\DefinitelyTyped\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Vendor\DefinitelyTyped\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Vendor\DefinitelyTyped\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Vendor\DefinitelyTyped\underscore\underscore.d.ts" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>18011</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18011/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

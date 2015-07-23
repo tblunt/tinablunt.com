@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="TinasApp" ng-controller="MainController">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tina Durmén Blunt, kontakt information Tina Durmén Blunt, about front end developer Tina Durmén Blunt, Medieteknik alumni Liu">
+    <meta name="description" content="The personal website of front end developer and former mediatechnology student Tina Durmén Blunt with portfolio, contact information and a collection of projects from school and things I have done on my spare time.">
+    <meta name="author" content="Tina Durmén Blunt">
+    <title>Tina Durmén Blunt</title>
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href="Vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/site.css" rel="stylesheet" />
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <background></background>
+    <div class="app">
+        <header ng-class="{'active': selectedView}" selected-view="selectedView"></header>
+        <div ng-view></div>
+    </div>
+    <!--<div class="content" ng-view></div>-->
+    <!--vendor-->
+    <script src="Vendor/jquery/jquery.min.js"></script>
+    <script src="Vendor/angular/angular.min.js"></script>
+    <script src="Vendor/angular-animate/angular-animate.min.js"></script>
+    <script src="Vendor/angular-route/angular-route.min.js"></script>
+    <script src="Vendor/angular/angular-sanitize.js"></script>
+    <script src="Vendor/underscore/underscore-min.js"></script>
+    <script src="Vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--to the cv-game-->
+    <link href="/App/Modules/Portfolio/CvGame/Styles/game.css" rel="stylesheet" />
+    <script src="/App/Modules/Portfolio/CvGame/js/easeljs-0.6.0.min.js"></script>
+    <script src="/App/Modules/Portfolio/CvGame/js/cvData.js"></script>
+    <script src="/App/Modules/Portfolio/CvGame/js/monster.js"></script>
+    <script src="/App/Modules/Portfolio/CvGame/js/spinningCoin.js"></script>
+    <script src="/App/Modules/Portfolio/CvGame/js/animateGubbe.js"></script>
+    <script src="/App/Modules/Portfolio/CvGame/js/ng-cvGame.js"></script>
+   
+
+
+    <script src="App/Helpers/BaseDirective.js"></script>
+    <script src="App/Helpers/Mediator.js"></script>
+    <script src="App/Helpers/StringHelpers.js"></script>
+    <script src="App/Helpers/Type.js"></script>
+
+    <script src="App/Messages/IMessage.js"></script>
+    <script src="App/Messages/SetSelectedView.js"></script>
+    <!--custom-->
+    <!--controllers-->
+    <script src="App/Contollers/MainController.js"></script>
+
+    <!--directives-->
+    <script src="App/Modules/Portfolio/Education/Scripts/EducationDirective.js"></script>
+
+    <script src="App/Modules/Background/BackgroundDirective.js"></script>
+    <script src="App/Modules/Header/Scripts/HeaderDirective.js"></script>
+    <script src="App/Modules/Creative/Scripts/ClothesDirective.js"></script>
+    <script src="App/Modules/Social/Scripts/SocialDirective.js"></script>
+    <script src="App/Modules/Portfolio/CareerLog/Scripts/CareerLogDirective.js"></script>
+    <script src="App/Modules/Creative/Recept/Scripts/ReceptDirective.js"></script>
+
+
+    <script src="App/Application.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43724495-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+</body>
+</html>

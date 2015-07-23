@@ -1,0 +1,54 @@
+﻿@import "../../../Styles/Shared/_Colors";
+.creative {
+    margin-top:1rem;
+    padding-bottom: 3rem;
+    .img-thumb {
+        padding-bottom:15px;
+        padding-top:15px;
+        vertical-align:top;
+        position:relative;
+           -webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+          transition: all 0.5s;
+
+        img {
+            max-width:100%;
+            max-height:100%;
+        }
+        .caption {
+            display:none;
+            background:@background_blue;
+            padding:1rem;
+            width:70%;
+            position:absolute;
+            bottom:0;
+            text-align:left;
+                p {
+                    font-size:1.4rem;
+                }
+               
+        }
+
+        &:hover {
+            .caption {
+                display:block;
+            }
+        }
+    }
+
+    .collection-header {
+        display:block;
+        text-align:left;
+        color:@accent_green;
+    }
+
+    .ingress {
+         font-weight:normal;
+        font-family:'Muli', sans-serif;
+        color:#86919a;
+        font-style:italic;
+        font-size:13px;
+        max-width:550px;
+        margin:0 auto;
+         padding:10px;
+    }
+}

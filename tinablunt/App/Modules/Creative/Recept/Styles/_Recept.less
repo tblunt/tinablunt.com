@@ -1,0 +1,115 @@
+﻿recept-list {
+    text-align:center;
+    .header-wrapper {
+        display:block;
+        text-align:left;
+        margin:2rem 0;
+        color:#b0c47f;
+    }
+
+    .ingress {
+         font-weight:normal;
+        font-family:'Muli', sans-serif;
+        color:#86919a;
+        font-style:italic;
+        font-size:13px;
+        max-width:550px;
+        margin:0 auto;
+         padding:10px;
+    }
+
+    .tumme {
+         display:inline-block;
+         cursor:pointer;
+          -webkit-transition: all 0.5s; 
+        transition: all 0.5s;
+
+         .tumme-content {
+            background: rgba(255,255,255,0.1);
+            padding:2rem;
+            margin:0.5rem;
+           
+            box-sizing:border-box;
+
+            img {
+                opacity:0.4;
+                height:3rem;
+                width:3rem;
+            }
+
+            h5 {
+                font-size:2rem;
+            }
+
+            .details {
+                text-align:left;
+            }
+
+            &:hover {
+                background:rgba(255,255,255,0.15);
+            }
+           
+        }
+
+         &.expanded {
+              -webkit-transition: all 0.5s; 
+        transition: all 0.5s;
+             h5 {
+                 color:#b0c47f;
+                 margin:0;
+             }
+             h5, img {
+                display:inline-block;
+                vertical-align:bottom;
+
+             }
+             .ingress {
+                 display:block;
+                 text-align:center;
+                 margin:1rem 0;
+             }
+             .ing>div {
+                 opacity:0.8;
+                 font-style:italic;
+                 font-size:1.5rem;
+                 margin:1rem;
+
+                 p, img {
+                     display:inline-block;
+                     vertical-align:middle;
+                 }
+                 p {
+                     margin:0 0 0 0.5rem;
+                 }
+                 img {
+                     height:1rem;
+                     width:1rem;
+                 }
+             }
+            img {
+                opacity:1;
+                height:4rem;
+                width:4rem;
+                margin-left:0.5rem;
+            }
+            .description {
+                margin:2rem 0;
+                line-height:2.5rem;
+                 -webkit-column-count: 2; 
+                -moz-column-count: 2; 
+                column-count: 2;
+            }
+
+            .link {
+                margin:2rem 0;
+                text-align:center;
+
+                a:hover {
+                    color:#f3ae73;
+                }
+            }
+           
+         }
+    }
+   
+}

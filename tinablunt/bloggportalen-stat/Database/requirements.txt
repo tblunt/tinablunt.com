@@ -1,0 +1,11 @@
+Cython==0.17.1
+MySQL-python==1.2.4c1
+PyYAML==3.10
+Twisted==12.2.0
+cyclone==1.0-rc13
+distribute==0.6.28
+pyOpenSSL==0.13
+## FIXME: could not find svn URL in dependency_links for this package:
+pymssql==2.0.0b1-dev-20111019
+wsgiref==0.1.2
+zope.interface==4.0.1

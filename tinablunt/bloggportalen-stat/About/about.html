@@ -1,0 +1,64 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <meta http-equiv="content-script-type" content="text/javascript">
+	<title>Om</title>
+	<script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../Delat/layout.css">
+</head>
+
+<body>
+	<div id="visBody">
+	
+		<script type="text/javascript" src="../Delat/menyBar.js"></script>
+		<script type="text/javascript" src="../Delat/measureHandler.js"></script>
+		<script type="text/javascript" src="../Main/mouseOverEvents.js"></script>
+	
+		<script type="text/javascript">
+		
+		var m = new measureObject2();
+		
+		d3.select("#visBody")
+				.style("width", m.width)
+				.style("height", m.height)
+				.style("top", m.top)
+				.append("div")
+				.attr("id","background")
+				.style("width", m.width)
+				.style("height", m.height);
+				
+		var menu = menyBar(4);
+		var txtDiv = d3.select("#visBody")
+						.append("div")
+						.style("position", "absolute")
+						.style("width", m.width*0.8)
+						.style("height", m.height*0.8)
+						.style("top", m.height*0.2)
+						.style("left", m.width*0.1);
+				
+				
+		txtDiv
+			.append("p")
+			.text("Varför verktyget utvecklats");
+			
+		txtDiv
+			.append("p")
+			.text("Meningen");	
+			
+		txtDiv
+			.append("p")
+			.text("Bloggen hittas inte i Twinglys indexering. Detta beror på att den url som är angiven i profilen på bloggportalen inte stämmer överrens med den url som pingas på Twingly.com. Till exempel så har baraben.com egentligen adressen ifkgoteborg.blogspot.com");
+		
+		txtDiv
+			.append("p")
+			.text("Om en blogg visar upp att den har väldigt många blogginlägg(Till exempel underbaraclara som har 1135 inlägg i månaden): Fel flöde har angivits på bloggportalen. Clara har angett sitt kommentarsflöde vilket gör att hon får ganska svinmånga inlägg per månad.");	
+		
+		txtDiv
+			.append("p")
+			.text("Det kan också bero på RSS-inställningarna gör så att bloggen inte går att pinga. Länka till RSS-hjälp.");		
+	</script>
+
+</body>
+</html>
+
