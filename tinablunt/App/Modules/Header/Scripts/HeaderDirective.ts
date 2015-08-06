@@ -83,16 +83,17 @@ module TinasApp {
                     "icon": "portfolio2",
                     "color": "orange",
                     "id": "Portfolio",
-                    "subviews": [{
-                        "title": "CV",
-                        "icon": "cv",
-                        "id": "CV"
-                    },
+                    "subviews": [
                         {
                             "title": "Karriären",
                             "icon": "project",
                             "id": "CareerLog"
                         },
+                        {
+                        "title": "CV",
+                        "icon": "cv",
+                        "id": "CV"
+                    },                        
                         {
                             "title": "Utbildning",
                             "icon": "study",

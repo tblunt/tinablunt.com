@@ -59,6 +59,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_5418.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_5425.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_5428.JPG" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\are1.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\are2.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\are3.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\are3.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\falun1.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\falun2.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\falun3.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\falun4.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\link1.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\link2.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\link3.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\link6.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\link9.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\schneidercity.jpg" />
     <Content Include="bloggportalen-stat\About\about.html" />
     <Content Include="bloggportalen-stat\bilder\active_arrow.png" />
     <Content Include="bloggportalen-stat\bilder\active_selector.png" />

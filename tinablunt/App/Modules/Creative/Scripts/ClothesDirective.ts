@@ -35,6 +35,18 @@ module TinasApp {
                     "collection": "Vår 2015",
                     "images": [
                         {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_5418.JPG",
+                            "desc": "Långärmad sommarklänning"
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_5425.JPG",
+                            "desc": "Sommarklänning"
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_5428.JPG",
+                            "desc": "Mönstrad mysklänning med låg midja"
+                        },
+                        {
                             "src": "App/Modules/Creative/Content/Clothes/IMG_4097.JPG",
                             "desc": "Svartvit klänning med vita muddar"
                         },
@@ -154,12 +166,8 @@ module TinasApp {
                             "desc": "Svart kavaj"
                         },
                         {
-                            "src": "App/Modules/Creative/Content/Clothes/IMG_4033.JPG",
-                            "desc": "Svart klänning med framspänt skärp och blommig rygg, fram"
-                        },
-                        {
                             "src": "App/Modules/Creative/Content/Clothes/IMG_4034.JPG",
-                            "desc": "Svart klänning med framspänt skärp och blommig rygg, bak"
+                            "desc": "Svart klänning med framspänt skärp och blommig rygg"
                         }
                     ]
                 }];

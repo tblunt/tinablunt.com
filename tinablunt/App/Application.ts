@@ -43,7 +43,7 @@ module TinasApp {
         .directive("clothes", Directives.Clothes);
 
     app.config(($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationService) => {
-        console.log("config");
+        
         $routeProvider
             .when('/', {})
             .when('/Hej', {
