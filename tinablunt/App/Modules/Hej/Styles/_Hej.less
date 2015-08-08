@@ -1,6 +1,37 @@
-﻿@import "../../../Styles/Shared/_Colors";
+﻿@import "../../../../Styles/Shared/_Colors.less";
+ .language-toggle {
+    position:absolute;
+    right:30px;
+    top:-50px;
+    cursor:pointer;
+   
+    width:auto;
+
+    img {
+        height:25px;
+        width:25px;
+        display:inline-block;
+         display:inline-block;
+        vertical-align:middle;
+    }
+    p {
+        display:inline-block;
+        vertical-align:middle;
+        margin:0;
+        font-size:12px;
+        margin-left:5px;
+    }
+
+    &:hover {
+        p {
+            opacity:0.7;
+        }
+    }
+}
+
 .hej {
      padding-top:50px;  
+     position:relative;
 
     h1 {
         color:@accent_turkois;

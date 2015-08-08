@@ -7,7 +7,8 @@ module TinasApp {
         selectedView: string;
         navitemClicked: (navitem: any) => void;
         navSubitemClick: (navitem: any, navsubitem: any) => void;
-        isActiveNavItem: (navitemid: any) => void;
+        isActiveNavItem: (navitemid: any) => void; 
+        isActiveNavSubItem: (navitemid: any) => void; 
     }
 
     export class HeaderDirective extends BaseDirective<IHeaderDirectiveScope> {
@@ -25,15 +26,24 @@ module TinasApp {
             scope.navItemData = this.getHeaderNavItemData();
             scope.navitemClicked = (navitem: any) => this.navitemClicked(navitem, scope);
             scope.isActiveNavItem = (navitemid: any) => this.isActiveNavItem(navitemid, scope);
+            scope.isActiveNavSubItem = (navitemid: any) => this.isActiveNavSubItem(navitemid, scope);
             scope.navSubitemClick = (subitem: any, navitem: any) => this.navSubitemClick(subitem, navitem, scope);
         }
 
         private isActiveNavItem(navitemid: string, scope: IHeaderDirectiveScope) {
+            
             var temp = scope.selectedView.indexOf(navitemid) > -1;
             return temp;
         }
 
+        private isActiveNavSubItem(subnavitemid: string, scope: IHeaderDirectiveScope) {
+            
+            var temp = scope.selectedView.indexOf(subnavitemid) > -1;
+            return temp;
+        }
+
         private navitemClicked(navitem: any, scope: IHeaderDirectiveScope) {
+            
             var temp = (scope.selectedView.indexOf(navitem.id) > -1) ? null : navitem.id;
 
             if (temp) {

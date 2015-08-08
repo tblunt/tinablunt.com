@@ -1,8 +1,11 @@
-﻿@import "../../../Styles/Shared/_Colors";
+﻿@import "../../../../Styles/Shared/_Colors.less";
 
 .specific_colors(@color) {
     & h1 {
         color:@color;
+    }
+     .active-sub {
+        border-bottom:5px solid @color;
     }
 }
 
@@ -85,14 +88,17 @@ header {
 
 .sub-view-header {
     background:rgba(255,255,255,0.1);
-    padding:1rem 0;
+    
     margin:1rem 0;
-     h1 {
+
+    h1 {
         margin:0;
         vertical-align:middle;
+        padding:1rem 0;
     }
     .navitem{
-        padding:2rem 2rem 0 2rem;
+        padding:0.5rem 0 0.5rem 0;
+        margin: 0 2rem;
         vertical-align:middle;
 
         img {
@@ -108,6 +114,7 @@ header {
             vertical-align:middle;
         }
     }
+   
     
 }
 

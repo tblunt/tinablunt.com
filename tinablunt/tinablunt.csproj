@@ -62,6 +62,8 @@
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_5418.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_5425.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_5428.JPG" />
+    <Content Include="App\Modules\Hej\Content\english.svg" />
+    <Content Include="App\Modules\Hej\Content\swedish.svg" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\are1.jpg" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\are2.jpg" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\are3.jpg" />

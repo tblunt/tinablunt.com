@@ -15,7 +15,8 @@
     <div class="navitem"
          ng-if="navitem.subviews"
          ng-repeat="subview in navitem.subviews"
-         ng-click="navSubitemClick(subview, navitem)">
+         ng-click="navSubitemClick(subview, navitem)"
+         ng-class="{'active-sub':isActiveNavSubItem(subview.id)}">
         <img ng-src="App/Modules/Header/Content/{{subview.icon}}.svg" />
         <p>{{subview.title}}</p>
     </div>

@@ -1,29 +1,56 @@
-﻿<div class="container hej">
+﻿<div class="language-toggle" ng-show="language == 'sve'" ng-click="language = 'eng'">
+    <img src="App/Modules/Hej/Content/english.svg" />
+    <p>In english</p>
+</div>
+<div class="language-toggle" ng-show="language == 'eng'" ng-click="language = 'sve'">
+    <img src="App/Modules/Hej/Content/swedish.svg" />
+    <p>På svenska</p>
+</div>
+<div class="container hej">
     <div class="row">
-        <div class="text-wrapper col-xs-12 col-sm-6">
+        <div class="text-wrapper col-xs-12 col-sm-6" ng-init="language = 'sve'">
+           
             <div class="row">
                 <img src="App/Modules/Hej/Content/hi.svg" class="col-xs-2" />
-                <p class="col-xs-10">Jag heter Tina Durmén Blunt och är en glad (se bild) och ambitiös<a href="#/Portfolio/CV"> (se portfolio)</a> tjej.</p>
+                <p class="col-xs-10">
+                    <span ng-show="language == 'sve'">Jag heter Tina Durmén Blunt och är en glad (se bild) och ambitiös<a href="#/Portfolio/CV"> (se portfolio)</a> tjej.</span>
+                    <span ng-show="language == 'eng'">My name is Tina Durmén Blunt and I'm an always smiling and hard working<a href="#/Portfolio/CV"> (see the portfolio)</a> girl.</span>
+                </p>
             </div>
 
             <div class="row">
                 <img src="App/Modules/Hej/Content/study.svg" class="col-xs-2" />
                 <p class="col-xs-10">
-                    Jag är utbildad civilingenjör i Medieteknik med huvudsaklig inriktning inom visualisering, ux/användbarhet, interaktionsdesign och programutveckling.
+                    <span ng-show="language == 'sve'">
+                        Jag är utbildad civilingenjör i Medieteknik med huvudsaklig inriktning inom visualisering, ux/användbarhet, interaktionsdesign och programutveckling.
+                    </span>
+                    <span ng-show="language == 'eng'">
+                        I have a master of science in media technology at Linköpings University with main focus in visualization, user experience/usability, interaction design and software development.
+                    </span>
                 </p>
             </div>
 
             <div class="row">
                 <img src="App/Modules/Hej/Content/work.svg" class="col-xs-2" />
                 <p class="col-xs-10">
-                    Jag jobbar som konsult på IT-byrån <a href="http://www.gaia.se/">Gaia</a> i Norrköping, där jag främst ägnar mig åt front end-utveckling, användbarhet och webbdesign.
-                    Jag älskar kombinationen av det tekniska och kreativa i mitt jobb men vissa perioder är det bara koda för hela slanten som gäller. Det är då innehållet till den här sidan kommer till.
-                    Ett bitande behov av att få utlopp för min kreativitet gör att antingen symaskinen, gitarren, pennan eller datorn åker fram.
+                    <span ng-show="language == 'sve'">
+                        Jag jobbar som konsult på IT-byrån <a href="http://www.gaia.se/">Gaia</a> i Norrköping, där jag främst ägnar mig åt front end-utveckling, användbarhet och webbdesign.
+                        Jag älskar kombinationen av det tekniska och kreativa i mitt jobb men vissa perioder är det bara koda för hela slanten som gäller. Det är då innehållet till den här sidan kommer till.
+                        Ett bitande behov av att få utlopp för min kreativitet gör att antingen symaskinen, gitarren, pennan eller datorn åker fram.
+                    </span>
+                    <span ng-show="language == 'eng'">
+                        I currently work at the digital bureau <a href="http://www.gaia.se/">Gaia</a> in Norrköping, where my main task involves front-end development, usability and web design.
+                        I love the combination of technical challenges and creative tasks my work provides. But there are periods when the only thing I do is write code all day.
+                        That's when the creative nerv starts to twitch and I have to go and get the sewing machine, pencil, computer or guitar. You can see some of the results if you click around.
+                    </span>
                 </p>
             </div>
             <div class="row">
                 <img src="App/Modules/Hej/Content/contact.svg" class="col-md-2 col-xs-2" />
-                <p class="col-xs-10">Vill du komma i kontakt med mig gör du det bäst på <a href="mailto:tinablunt@gmail.com">tinablunt@gmail.com</a></p>
+                <p class="col-xs-10">
+                    <span ng-show="language == 'sve'">Vill du komma i kontakt med mig gör du det bäst på <a href="mailto:tinablunt@gmail.com">tinablunt@gmail.com</a></span>
+                    <span ng-show="language == 'eng'">If you want to contact me, please use my mail adress <a href="mailto:tinablunt@gmail.com">tinablunt@gmail.com</a></span>
+                </p>
             </div>
 
         </div>

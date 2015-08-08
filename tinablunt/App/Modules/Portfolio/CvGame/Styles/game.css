@@ -9,7 +9,7 @@
     position:relative;
     width:1009px;
     min-height:400px;
-    padding-top:130px;
+    padding-top:80px;
     margin:0 auto;
     overflow:hidden;
 }
@@ -24,7 +24,7 @@
 
 .game .itemInfo {
     position:absolute;
-    top:140px;
+    top:90px;
     left:3%;
     font-size:9pt;
     min-width:100px;
@@ -58,7 +58,7 @@
 
 .game .coinInfo {
     position:absolute;
-    top:140px;
+    top:90px;
     right:3%;
     min-width:100px;
     padding:10px;
@@ -77,13 +77,13 @@
 .game .infoImg {
     position:absolute;
     left:10%;
-    top:70px;
+    top:20px;
 }
 
 .game .coinImg {
     position:absolute;
     right:10%;
-    top:70px;
+    top:20px;
 }
 
 .game .fail {
@@ -91,7 +91,7 @@
     left:0;
     width:100%;
     text-align:center;
-    top:200px;
+    top:150px;
     color:#b5b5b5;
 }
 
@@ -99,7 +99,7 @@
     position: absolute;
     width:100%;
     text-align:center;
-    top:250px;
+    top:200px;
 }
 .game .failText {
     font-size:50pt;
