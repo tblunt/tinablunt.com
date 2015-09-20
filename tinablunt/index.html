@@ -27,7 +27,11 @@
     <script src="Vendor/angular/angular-sanitize.js"></script>
     <script src="Vendor/underscore/underscore-min.js"></script>
     <script src="Vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="Vendor/ui-bootstrap/ui-bootstrap-tpls-0.13.4.min.js"></script>
+    <script src="Vendor/skrollr/skrollr.js"></script>
+    <script src="Vendor/skrollr/skrollr.menu.js"></script>
 
+    <!--<script src="Application.js"></script>-->
     <!--to the cv-game-->
     <link href="/App/Modules/Portfolio/CvGame/Styles/game.css" rel="stylesheet" />
     <script src="/App/Modules/Portfolio/CvGame/js/easeljs-0.6.0.min.js"></script>
@@ -36,7 +40,6 @@
     <script src="/App/Modules/Portfolio/CvGame/js/spinningCoin.js"></script>
     <script src="/App/Modules/Portfolio/CvGame/js/animateGubbe.js"></script>
     <script src="/App/Modules/Portfolio/CvGame/js/ng-cvGame.js"></script>
-   
 
 
     <script src="App/Helpers/BaseDirective.js"></script>
@@ -46,9 +49,12 @@
 
     <script src="App/Messages/IMessage.js"></script>
     <script src="App/Messages/SetSelectedView.js"></script>
+    <script src="App/Messages/RefreshSkrollr.js"></script>
+
     <!--custom-->
     <!--controllers-->
     <script src="App/Contollers/MainController.js"></script>
+    <script src="App/Modules/Portfolio/Education/Scripts/PortfolioController.js"></script>
 
     <!--directives-->
     <script src="App/Modules/Portfolio/Education/Scripts/EducationDirective.js"></script>
@@ -59,20 +65,21 @@
     <script src="App/Modules/Social/Scripts/SocialDirective.js"></script>
     <script src="App/Modules/Portfolio/CareerLog/Scripts/CareerLogDirective.js"></script>
     <script src="App/Modules/Creative/Recept/Scripts/ReceptDirective.js"></script>
-
+    <script src="App/Modules/Portfolio/Education/Directives/Courses/CoursesDirective.js"></script>
+    <script src="App/Modules/Portfolio/Education/Directives/ImageCarousel/ImageCarousel.js"></script>
 
     <script src="App/Application.js"></script>
 
     <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-43724495-1']);
-    _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-43724495-1']);
+        _gaq.push(['_trackPageview']);
 
-    (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
     </script>
 </body>
 </html>

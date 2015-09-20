@@ -1,4 +1,5 @@
-﻿/// <autosync enabled="true" />
+﻿
+
 module TinasApp {
     'use strict';
 
@@ -22,25 +23,34 @@ module TinasApp {
         }
 
         public initialize(scope: ISocialDirectiveScope, element: JQuery, attributes: ng.IAttributes): void {
+            var getting = false;
             scope.getDate = (date) => this.getDate(date);
             scope.setSelectedImage = (img) => this.setSelectedImage(img,scope);
 
             this.months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
-            this.getData('https://api.instagram.com/v1/users/33200675/media/recent/?access_token=33200675.054f33d.4d1b7684b9e8404eac2ad2f309d2c77d&count=20' ,(d) => {
+
+            this.getData('https://api.instagram.com/v1/users/33200675/media/recent/?access_token=33200675.054f33d.4d1b7684b9e8404eac2ad2f309d2c77d&count=20',(d) => {
+               
                 scope.instaImages = d.data;
                 this.next_url = d.pagination.next_url;
                 scope.$apply();
              
             });
 
-            $(window).on('scroll', () => {
-                if ($(window).scrollTop() + $(window).height() > $(".app").height()-5) {
-                    this.getData(this.next_url, (d) => {
-                        scope.instaImages = scope.instaImages.concat(d.data);
-                        this.next_url = d.pagination.next_url;
-                        scope.$apply();
+            $(window).on('scroll',() => {
+               
+                if ($(window).scrollTop() + $(window).height() > $(".ngview").height() - 5) {
+                    if (!getting) {
+                        getting = true;
+                        this.getData(this.next_url,(d) => {
+                            getting = false;
+                            scope.instaImages = scope.instaImages.concat(d.data);
+                            this.next_url = d.pagination.next_url;
+                            scope.$apply();
 
-                    });
+                        });
+                    }
+                                      
                 }
             });
         }
@@ -55,7 +65,8 @@ module TinasApp {
             scope.selectedImageId = (imgId != scope.selectedImageId) ? imgId : null;
         }
 
-        private getData(url,callback) {
+        private getData(url, callback) {
+           
             var accessToken = '054f33dac6504612a2c40581c0fa2daf';
           
             $.ajax({
@@ -64,7 +75,7 @@ module TinasApp {
                 type: 'GET',
                 data: { client_id: accessToken },
                 success: (data) => {
-                    console.log(data);
+                   
                     if (callback)
                         callback(data);
                 },

@@ -1,8 +1,14 @@
-﻿/// <autosync enabled="true" />
+﻿/// <reference path="modules/background/backgrounddirective.ts" />
+/// <reference path="modules/creative/scripts/clothesdirective.ts" />
+/// <reference path="modules/creative/recept/scripts/receptdirective.ts" />
+/// <reference path="modules/header/scripts/headerdirective.ts" />
+/// <reference path="modules/portfolio/careerlog/scripts/careerlogdirective.ts" />
+/// <reference path="modules/portfolio/education/scripts/portfoliocontroller.ts" />
+/// <reference path="modules/social/scripts/socialdirective.ts" />
 
 module TinasApp {
     'use strict';
-
+    
     class Directives {
 
         public static Header(): any {
@@ -29,6 +35,14 @@ module TinasApp {
             return new ReceptDirective();
         }
 
+        public static Courses($q: ng.IQService): any {
+            return new CoursesDirective($q);
+        }
+
+        public static ImageCarousel(): any {
+            return new ImageCarouselDirective();
+        }
+
     }
 
     var app = angular.module('TinasApp', ['ngRoute', 'ngCVGame', 'Education', 'ngSanitize']);
@@ -40,9 +54,11 @@ module TinasApp {
         .directive("social", Directives.Social)
         .directive("careerLog", Directives.CareerLog)
         .directive("receptList", Directives.Recept)
-        .directive("clothes", Directives.Clothes);
+        .directive("clothes", Directives.Clothes)
+        .directive("courses", Directives.Courses)
+        .directive("imageCarousel", Directives.ImageCarousel);
 
-    app.config(($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationService) => {
+    app.config(($routeProvider: any, $locationProvider: ng.ILocationService) => {
         
         $routeProvider
             .when('/', {})
@@ -59,7 +75,8 @@ module TinasApp {
             templateUrl: 'App/Modules/Portfolio/Templates/Portfolio.html'
         })
             .when('/Portfolio/Education', {
-            templateUrl: 'App/Modules/Portfolio/Education/Templates/Education.html'
+            templateUrl: 'App/Modules/Portfolio/Education/Templates/Education.html',
+            controller: PortfolioController.factory()
         })
             .when('/Portfolio/CareerLog', {
             templateUrl: 'App/Modules/Portfolio/CareerLog/Templates/CareerLog.html'

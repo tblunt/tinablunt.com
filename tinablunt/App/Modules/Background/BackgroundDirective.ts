@@ -1,6 +1,4 @@
-﻿// <autosync enabled="true" />
-
-module TinasApp {
+﻿module TinasApp {
     'use strict';
 
     export interface IBackgroundDirectiveScope extends ng.IScope {

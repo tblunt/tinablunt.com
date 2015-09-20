@@ -81,14 +81,6 @@
         "img": [ "/App/Modules/Portfolio/CareerLog/Content/IMG_20131025_010813.jpg" ]
     },
     {
-        "date": "2014-10-29",
-        "tags": "projekt",
-        "link": "",
-        "header": "Leon.se och Umbraco.",
-        "content": "Jag fick uppdraget att göra om LEONs egna hemsida Leon.se och i och med det tog jag även chansen att lära mig Umbraco. Jag byggde först hela sidan statiskt utefter önskemål och skisser från ad och strateger på LEON och lade sedan in hela sidan i Umbraco med dynamiska menyer och jobbade mycket med razor för att knyta samman de olika sidorna med varandra. Till exempel knyts kundsidan ihop med alla de projekt och case som LEON vill visa upp på sin sida.",
-        "img": [ "/App/Modules/Portfolio/CareerLog/Content/umbraco-logo.jpg", "/App/Modules/Portfolio/CareerLog/Content/umbraco.png" ]
-    },
-    {
         "date": "2013-11-01",
         "tags": "projekt",
         "link": "",
@@ -170,13 +162,21 @@
         "content": "Hej Tina, du kan väl vara med i vår sektion för kvinnliga förebilder och besvara några frågor?<br><br>Nu kommer ni tro att jag ska skriva att det är sjukt och overkligt och smickrande och kul. Kvinnlig förebild liksom, när hände det? Kul är det men jag tycker inte att det är så himla märkligt. Inte det ödmjukaste jag sagt kanske men jag tycker baske mig så. Med tanke på vilka kvinnliga förebilder tjejer blir påtvingade ute i stora vida världen tycker jag att det är hög tid att sådana som jag också tvingas på.<br><br>Tänk dig en värld där tjejer matas med att en framgångsrik kvinna är mer än en Hollywoodfru eller en poppis bloggerska. Kanske skulle de då hamna på platser som nu matas på och är reserverade för framgångsrika män? Läs intervjuvn här: <a href='http://systerskapet.saksaren.se/kvinnliga-forebilder-2/' target='_blank'>http://systerskapet.saksaren.se/kvinnliga-forebilder-2/</a>",
         "img": []
     },
-     {
+    {
         "date": "2015-07-02",
         "tags": "projekt",
         "link": "http://www.aretrails.com/",
         "header": "Åre Trails lanseras.",
         "content": "Jag har under våren varit med och utvecklat en webbapplikation för Åre Destination: <a href='http://www.aretrails.com/'>Åre Trails</a>. Appen är till för att visa upp vad det finns att göra på sommaren i Åre. Allt från cykelleder till löpning, ridning och vandringsleder. Innan har Åre Destination använt sig av tryckta broschyrer för att samla och sprida information om alla leder. De gav oss nu uppdraget att göra en digital version av dessa broschyrer samt ett sätt att hålla all leddata och text på ett ställe.<br><br>Åre Destionation vill ha det senaste rent tekniskt med största syfte att inspirera men även kunna ersätta ledbroschyrerna funktionellt. Vi ville skapa en interaktiv 3D-karta och valde att utnyttja 3D-grafik i web-GL som precis hade blivit möjligt att göra i webbläsare även i mobiltelefoner.<br><br>Geografiska datat till kartan är från Lantmäteriet och grafiken skriven i three.js. Applikationen är skriven i Typescript och Angular där jag främst suttit med GUI-delarna. Den är både en responsiv webbapp som funkar på all desktopstorlekar och genom PhoneGap skapade vi även native-appar för både iOS och Android. Vi byggde även ett CMS (adminsida) där kund kan lägga till eller ändra leder med tillhörade information och publicera direkt upp till Åre Trails via signalR.",
-        "img": ["/App/Modules/Portfolio/CareerLog/Content/are1.jpg","/App/Modules/Portfolio/CareerLog/Content/are2.jpg","/App/Modules/Portfolio/CareerLog/Content/are3.png"]
+        "img": [ "/App/Modules/Portfolio/CareerLog/Content/are1.jpg", "/App/Modules/Portfolio/CareerLog/Content/are2.jpg", "/App/Modules/Portfolio/CareerLog/Content/are3.png" ]
+    },
+     {
+        "date": "2015-07-02",
+        "tags": "projekt",
+        "link": "http://eastswedenhack.se/",
+        "header": "Jury för bästa användarupplevelse på East Sweden Hack.",
+        "content": "East sweden hack är ett stort event för hela region Östergötland där 20 stycken uttagna lag tävlar i att bygga en digital lösning på en intensiv helg. I år handlade det om att ta användning av internet of things och öppna datakällor och på så sätt lösa ett vardagsproblem eller helt enkelt bara förgylla vardagen.<br><br>Som ordförande i priskategorin för bästa användarupplevelse ville jag hitta det lag som hade satt användaren först. Både i gränssnittet men även i själva resan genom hela upplevelsen. <br><br> Det laget som gjorde det bäst var Tellipark som hade skapat ett system för att förboka och onlinebetala parkeringsplatser samt registrering på plats både när man anländer samt lämnar sin plats. Jäkligt bra jobbat och en väldigt bra lösning på ett relevant vardagsproblem.",
+        "img": []
     }
     
      

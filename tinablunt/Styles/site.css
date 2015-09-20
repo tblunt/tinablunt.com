@@ -436,4 +436,194 @@ recept-list .tumme.expanded .link a:hover {
 .career-log.container .video-wrapper iframe {
   width: 100%;
 }
+.portfolio .view {
+  left: 0;
+  right: 0;
+  position: fixed;
+  color: #fff;
+  text-align: left;
+}
+.portfolio .view h1 {
+  color: #f3ae73;
+}
+#nummer1 {
+  background: transparent;
+  margin-top: 350px;
+  text-align: center;
+}
+#nummer1 .content {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 100%;
+  padding: 50px 0;
+}
+#nummer1 .content .text {
+  max-width: 400px;
+  display: inline-block;
+}
+#nummer1 .content .text span {
+  font-size: 30px;
+  opacity: 0.7;
+}
+.portfolio-menu {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  text-align: left;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 100px;
+}
+.portfolio-menu .menu-item {
+  background: #f3ae73;
+  padding: 5px;
+  margin: 5px 0;
+  display: inline-block;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.portfolio-menu .menu-item p {
+  margin: 0;
+}
+.projects {
+  background: rgba(255, 255, 255, 0.1);
+  padding-bottom: 20px;
+}
+.projects .container {
+  position: relative;
+}
+.projects .project-row {
+  position: relative;
+}
+.projects .details {
+  position: absolute;
+  top: 210px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 380px;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -webkit-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+}
+.projects .details image-carousel {
+  height: 380px;
+}
+.projects .details img {
+  max-height: 100%;
+  width: 100%;
+}
+.projects .details.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in 1s;
+  -moz-transition: opacity 1s ease-in 1s;
+  -webkit-transition: opacity 1s ease-in 1s;
+  -ms-transition: opacity 1s ease-in 1s;
+}
+.projects .project {
+  padding-right: 0;
+  padding-left: 0;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 120%;
+  margin-bottom: 0;
+  transition: margin-bottom 0.5s ease-in 0.5s;
+  -moz-transition: margin-bottom 0.5s ease-in 0.5s;
+  -webkit-transition: margin-bottom 0.5s ease-in 0.5s;
+  -ms-transition: margin-bottom 0.5s ease-in 0.5s;
+  cursor: pointer;
+}
+.projects .project img {
+  width: 100%;
+}
+.projects .project .title {
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+  position: absolute;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjUxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.51)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a000000', endColorstr='#82000000', GradientType=0);
+}
+.projects .project .title p {
+  margin: 0;
+  padding: 1rem;
+}
+.projects .project:hover .title {
+  background: #000;
+  color: #fff;
+}
+.projects .project.expand {
+  margin-bottom: 400px;
+  transition: margin-bottom 0.5s ease-in;
+  -moz-transition: margin-bottom 0.5s ease-in;
+  -webkit-transition: margin-bottom 0.5s ease-in;
+  -ms-transition: margin-bottom 0.5s ease-in;
+}
+.projects .project.expand .title {
+  background: #f3ae73;
+  color: #fff;
+}
+.courses {
+  text-align: left;
+  margin-bottom: 300px;
+}
+.courses .category-wrapper {
+  padding-right: 0;
+  padding-left: 0;
+}
+.courses .category-wrapper h3 {
+  margin-top: 0;
+}
+.courses .category-wrapper .category {
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 0.5rem;
+  padding: 20px;
+}
+.courses .course {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.courses .course:hover span,
+.courses .course:hover h5 {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -webkit-transition: opacity 0.5s ease-in;
+  -ms-transition: opacity 0.5s ease-in;
+}
+.courses .course h5 {
+  margin-bottom: 0;
+  font-size: 16px;
+  opacity: 0.8;
+  position: relative;
+}
+.courses .course h5 span {
+  font-size: 20px;
+  color: #f3ae73;
+  font-weight: bold;
+  opacity: 0;
+  position: absolute;
+  left: -15px;
+  top: -5px;
+}
+.courses .course .ingress {
+  color: #f3ae73;
+  font-size: 14px;
+  transition: font-size 0.5s ease-in;
+  -moz-transition: font-size 0.5s ease-in;
+  -webkit-transition: font-size 0.5s ease-in;
+  -ms-transition: font-size 0.5s ease-in;
+}
 /*# sourceMappingURL=site.css.map */

@@ -35,6 +35,14 @@ module TinasApp {
                     "collection": "Vår 2015",
                     "images": [
                         {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_6846.JPG",
+                            "desc": "Svart kjol i kostymtyg med fickor och skärp i mocka"
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_6850.JPG",
+                            "desc": "Ännu en mönstrad sommarklänning"
+                        },
+                        {
                             "src": "App/Modules/Creative/Content/Clothes/IMG_5418.JPG",
                             "desc": "Långärmad sommarklänning"
                         },

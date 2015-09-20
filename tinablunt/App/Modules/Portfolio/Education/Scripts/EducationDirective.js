@@ -16,7 +16,7 @@
                 link: function (scope, element, attrs) {
                     $timeout(function () {
                         $timeout(function () {
-                            console.log("education");
+                            console.log("education")
                             var news,data = newsData2();
                         
                             news = new News(data);
