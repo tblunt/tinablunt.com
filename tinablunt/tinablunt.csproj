@@ -65,6 +65,7 @@
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_5428.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_6846.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_6850.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_7477.JPG" />
     <Content Include="App\Modules\Hej\Content\english.svg" />
     <Content Include="App\Modules\Hej\Content\swedish.svg" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\are1.jpg" />
@@ -446,13 +447,6 @@
     <Content Include="Vendor\jquery\jquery.min.js" />
     <Content Include="Vendor\skrollr\skrollr.js" />
     <Content Include="Vendor\skrollr\skrollr.menu.js" />
-    <Content Include="Vendor\ui-bootstrap\ui-bootstrap-0.13.4.min.js" />
-    <Content Include="Vendor\ui-bootstrap\ui-bootstrap-custom-0.13.4-csp.css" />
-    <Content Include="Vendor\ui-bootstrap\ui-bootstrap-custom-0.13.4.js" />
-    <Content Include="Vendor\ui-bootstrap\ui-bootstrap-custom-0.13.4.min.js" />
-    <Content Include="Vendor\ui-bootstrap\ui-bootstrap-custom-tpls-0.13.4.js" />
-    <Content Include="Vendor\ui-bootstrap\ui-bootstrap-custom-tpls-0.13.4.min.js" />
-    <Content Include="Vendor\ui-bootstrap\ui-bootstrap-tpls-0.13.4.min.js" />
     <Content Include="Vendor\underscore\underscore-min.js" />
     <Content Include="Vendor\underscore\underscore.js" />
     <Content Include="Web.config" />
@@ -551,7 +545,6 @@
     <TypeScriptCompile Include="Vendor\DefinitelyTyped\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Vendor\DefinitelyTyped\skrollr\skrollr.d.ts" />
     <TypeScriptCompile Include="Vendor\DefinitelyTyped\tsd.d.ts" />
-    <TypeScriptCompile Include="Vendor\DefinitelyTyped\ui-boostrap\ui-bootstrap.d.ts" />
     <TypeScriptCompile Include="Vendor\DefinitelyTyped\underscore\underscore.d.ts" />
   </ItemGroup>
   <ItemGroup />

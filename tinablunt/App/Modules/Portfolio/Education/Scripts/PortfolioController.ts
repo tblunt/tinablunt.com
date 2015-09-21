@@ -514,12 +514,12 @@ module TinasApp {
                             title: "Medietekniks PR-utskott",
                             type: "meriter",
                             date: "1",
-                            img: ["App/Modules/Portfolio/Education/Content/mt.png"],
+                            img: ["App/Modules/Portfolio/Education/Content/MT.PNG"],
                             shortTitle: "PR-utskottet",
                             underTitle: "Övriga meriter",
                             x: 400,
                             y: 80,
-                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                             description: "Medlem. Hjälpte till i pr-arbetet för Medietekniksektionen bland annat med att informera om event samt att göra reklam för medietekniks sektionsmedlemmar."
                         },
                         {
@@ -538,7 +538,7 @@ module TinasApp {
                             title: "Medietekniks Sektionsstyrelse (08/09)",
                             type: "meriter",
                             date: "2",
-                            img: ["App/Modules/Portfolio/Education/Content/mt.png",
+                            img: ["App/Modules/Portfolio/Education/Content/MT.PNG",
                                 "App/Modules/Portfolio/Education/Content/mt2.png",
                                 "App/Modules/Portfolio/Education/Content/mt1.png"],
                             shortTitle: "MT-styrelsen",
@@ -646,7 +646,7 @@ module TinasApp {
                             shortTitle: "Bildbehandling",
                             x: 720,
                             y: 0,
-                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                             description: "Kursens syfte är att ge en teoretisk och praktisk grund för datoriserad bearbetning och analys av digitala bilder."
                         },
                         {
@@ -658,7 +658,7 @@ module TinasApp {
                             shortTitle: "Modelleringsprojekt",
                             x: 620,
                             y: 0,
-                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                             description: "En dynamisk modell ska skapas för ett utvalt projektobjekt. Genom simulering med hjälp av modellen ska objektet studeras dynamiskt. Rapportskrivning och muntlig presentation på svenska."
                         },
                         {
@@ -670,7 +670,7 @@ module TinasApp {
                             shortTitle: "Användargräsnitt",
                             x: 500,
                             y: 10,
-                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                             description: "Kursen syftar till att ge studenterna grundläggande kännedom om kognitiva processer och interatkiva datorsystem samt kunskaper om principer, metoder och verktyg för att utveckla datorsystem anpassade till användaren. "
                         },
                         {
@@ -682,7 +682,7 @@ module TinasApp {
                             img: ["App/Modules/Portfolio/Education/Content/mt_thumb.png"],
                             x: 810,
                             y: 40,
-                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                             description: "Kursen syftar till att ge fördjupade insikter i metoder för visualisering av vetenskapliga data från experiment och beräkningar samt genom programmeringsövningar belysa dessa metoders möjligheter och begränsningar. "
                         },
                         {
@@ -694,7 +694,7 @@ module TinasApp {
                             img: ["App/Modules/Portfolio/Education/Content/mt_thumb.png"],
                             x: 657,
                             y: 10,
-                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                            thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                             description: "Målet med kursen är att studenterna skall få insikt i vad VR är, hur det används och hur det kan implementeras och utnyttjas. De skalläven lära sig analysera behov och utmaningar, och lära sig att tillämpa teorier och principer för att realisera effektiva VR-gränssnitt och -interaktion. "
                         },
                         {

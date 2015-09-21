@@ -32,6 +32,16 @@ module TinasApp {
         private getImageData() {
             return [
                 {
+                    "collection": "Höst 2015",
+                    "images": [
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_7477.JPG",
+                            "desc": "Bikerjacka i kostymtyg med mockadetaljer."
+                        }                       
+
+                    ]
+                },
+                {
                     "collection": "Vår 2015",
                     "images": [
                         {
