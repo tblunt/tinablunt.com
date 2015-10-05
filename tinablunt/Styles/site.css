@@ -183,6 +183,11 @@ header.active .nav-label {
 .color_orange .active-sub {
   border-bottom: 5px solid #f3ae73;
 }
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  header .siteheader {
+    margin-top: 50px;
+  }
+}
 .language-toggle {
   position: absolute;
   right: 30px;
@@ -504,7 +509,7 @@ recept-list .tumme.expanded .link a:hover {
   left: 0;
   right: 0;
   overflow: hidden;
-  height: 380px;
+  height: 580px;
   opacity: 0;
   transition: opacity 1s ease-in;
   -moz-transition: opacity 1s ease-in;
@@ -512,7 +517,7 @@ recept-list .tumme.expanded .link a:hover {
   -ms-transition: opacity 1s ease-in;
 }
 .projects .details image-carousel {
-  height: 380px;
+  height: 580px;
 }
 .projects .details img {
   max-height: 100%;
@@ -529,15 +534,29 @@ recept-list .tumme.expanded .link a:hover {
   padding-right: 0;
   padding-left: 0;
   height: 200px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 120%;
   margin-bottom: 0;
   transition: margin-bottom 0.5s ease-in 0.5s;
   -moz-transition: margin-bottom 0.5s ease-in 0.5s;
   -webkit-transition: margin-bottom 0.5s ease-in 0.5s;
   -ms-transition: margin-bottom 0.5s ease-in 0.5s;
   cursor: pointer;
+  position: relative;
+}
+.projects .project .bg,
+.projects .project .img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.projects .project .bg {
+  background: #fff;
+}
+.projects .project .img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover cover;
 }
 .projects .project img {
   width: 100%;
@@ -548,24 +567,25 @@ recept-list .tumme.expanded .link a:hover {
   padding: 5px;
   position: absolute;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjUxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.51)));
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.51) 100%);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.71) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.71)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.71) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.71) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.71) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.71) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a000000', endColorstr='#82000000', GradientType=0);
 }
 .projects .project .title p {
   margin: 0;
   padding: 1rem;
+  font-weight: 500;
 }
 .projects .project:hover .title {
   background: #000;
   color: #fff;
 }
 .projects .project.expand {
-  margin-bottom: 400px;
+  margin-bottom: 600px;
   transition: margin-bottom 0.5s ease-in;
   -moz-transition: margin-bottom 0.5s ease-in;
   -webkit-transition: margin-bottom 0.5s ease-in;
@@ -625,5 +645,18 @@ recept-list .tumme.expanded .link a:hover {
   -moz-transition: font-size 0.5s ease-in;
   -webkit-transition: font-size 0.5s ease-in;
   -ms-transition: font-size 0.5s ease-in;
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+  .portfolio-menu {
+    position: fixed;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    text-align: center;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=site.css.map */

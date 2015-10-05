@@ -35,6 +35,10 @@ module TinasApp {
                     "collection": "Höst 2015",
                     "images": [
                         {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_7641.JPG",
+                            "desc": "Jacka i tvinnat ull och detaljer i gammalt tyg för kuddfodral."
+                        },
+                        {
                             "src": "App/Modules/Creative/Content/Clothes/IMG_7477.JPG",
                             "desc": "Bikerjacka i kostymtyg med mockadetaljer."
                         }                       

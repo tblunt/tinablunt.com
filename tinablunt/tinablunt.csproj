@@ -66,6 +66,7 @@
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_6846.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_6850.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_7477.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_7641.JPG" />
     <Content Include="App\Modules\Hej\Content\english.svg" />
     <Content Include="App\Modules\Hej\Content\swedish.svg" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\are1.jpg" />
@@ -522,7 +523,6 @@
     <TypeScriptCompile Include="App\Messages\RefreshSkrollr.ts" />
     <TypeScriptCompile Include="App\Modules\Background\BackgroundDirective.ts" />
     <TypeScriptCompile Include="App\Modules\Creative\Recept\Scripts\ReceptDirective.ts" />
-    <TypeScriptCompile Include="App\Modules\Creative\Scripts\ClothesDirective.ts" />
     <TypeScriptCompile Include="App\Modules\Creative\Scripts\ClothesDirective.ts" />
     <TypeScriptCompile Include="App\Modules\Header\Scripts\HeaderDirective.ts" />
     <TypeScriptCompile Include="App\Modules\Portfolio\CareerLog\Scripts\CareerLogDirective.ts" />
