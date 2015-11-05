@@ -170,13 +170,21 @@
         "content": "Jag har under våren varit med och utvecklat en webbapplikation för Åre Destination: <a href='http://www.aretrails.com/'>Åre Trails</a>. Appen är till för att visa upp vad det finns att göra på sommaren i Åre. Allt från cykelleder till löpning, ridning och vandringsleder. Innan har Åre Destination använt sig av tryckta broschyrer för att samla och sprida information om alla leder. De gav oss nu uppdraget att göra en digital version av dessa broschyrer samt ett sätt att hålla all leddata och text på ett ställe.<br><br>Åre Destionation vill ha det senaste rent tekniskt med största syfte att inspirera men även kunna ersätta ledbroschyrerna funktionellt. Vi ville skapa en interaktiv 3D-karta och valde att utnyttja 3D-grafik i web-GL som precis hade blivit möjligt att göra i webbläsare även i mobiltelefoner.<br><br>Geografiska datat till kartan är från Lantmäteriet och grafiken skriven i three.js. Applikationen är skriven i Typescript och Angular där jag främst suttit med GUI-delarna. Den är både en responsiv webbapp som funkar på all desktopstorlekar och genom PhoneGap skapade vi även native-appar för både iOS och Android. Vi byggde även ett CMS (adminsida) där kund kan lägga till eller ändra leder med tillhörade information och publicera direkt upp till Åre Trails via signalR.",
         "img": [ "/App/Modules/Portfolio/CareerLog/Content/are1.jpg", "/App/Modules/Portfolio/CareerLog/Content/are2.jpg", "/App/Modules/Portfolio/CareerLog/Content/are3.png" ]
     },
-     {
+    {
         "date": "2015-09-07",
         "tags": "projekt",
         "link": "http://eastswedenhack.se/",
         "header": "Jury för bästa användarupplevelse på East Sweden Hack.",
         "content": "East sweden hack är ett stort event för hela region Östergötland där 20 stycken uttagna lag tävlar i att bygga en digital lösning på en intensiv helg. I år handlade det om att ta användning av internet of things och öppna datakällor och på så sätt lösa ett vardagsproblem eller helt enkelt bara förgylla vardagen.<br><br>Som ordförande i priskategorin för bästa användarupplevelse ville jag hitta det lag som hade satt användaren först. Både i gränssnittet men även i själva resan genom hela upplevelsen. <br><br> Det laget som gjorde det bäst var Tellipark som hade skapat ett system för att förboka och onlinebetala parkeringsplatser samt registrering på plats både när man anländer samt lämnar sin plats. Jäkligt bra jobbat och en väldigt bra lösning på ett relevant vardagsproblem.",
-        "img": []
+        "img": [ ]
+    },
+     {
+        "date": "2015-11-02",
+        "tags": "projekt",
+        "link": "",
+        "header": "Inspirationsföreläser för studerande IT-tjejer.",
+        "content": "Jag fick chansen och den stora äran att få komma och prata framför en massa IT-studerande tjejer i Linköping. Jag ville få dom att tänka till. Bryta betéenden som jag vet att jag själv hade och som jag förlorade extremt mycket på. Men främst av allt ville jag att dom skulle gå därifrån med blicken framåt, huvudet högt och fulla med pepp!<br><br> <a href='/#/Portfolio/CareerLog/ITBehoverOlika'>Läs föreläsningen här<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a>",
+        "img": ["/App/Modules/Portfolio/CareerLog/Content/ITOlika/Slide1.png"]
     }
     
      

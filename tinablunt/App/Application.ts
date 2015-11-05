@@ -81,6 +81,9 @@ module TinasApp {
             .when('/Portfolio/CareerLog', {
             templateUrl: 'App/Modules/Portfolio/CareerLog/Templates/CareerLog.html'
         })
+            .when('/Portfolio/CareerLog/ITBehoverOlika', {
+            templateUrl: 'App/Modules/Portfolio/CareerLog/Templates/ITBehoverOlika.html'
+        })
             .when('/Social', {
             templateUrl: 'App/Modules/Social/Templates/Social.html'
         });

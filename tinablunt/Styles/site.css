@@ -441,6 +441,15 @@ recept-list .tumme.expanded .link a:hover {
 .career-log.container .video-wrapper iframe {
   width: 100%;
 }
+.it-olika.container {
+  text-align: left;
+}
+.it-olika.container .row {
+  padding-bottom: 40px;
+}
+.it-olika.container .strong {
+  font-weight: bold;
+}
 .portfolio .view {
   left: 0;
   right: 0;
