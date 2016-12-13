@@ -22,7 +22,6 @@ module TinasApp {
                 console.log("error getting careerlog data");
             });
 
-            console.log("CareerLogDirective");
         }
 
     }

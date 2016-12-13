@@ -119,6 +119,44 @@ var TinasApp;
         ClothesDirective.prototype.getImageData = function () {
             return [
                 {
+                    "collection": "Vår 2016",
+                    "images": [
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0890.JPG",
+                            "desc": "Min första väska någonsin. Kashmir, matt-tyg, tvinnat ull och fuskskinn."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0887.JPG",
+                            "desc": "Svart halterneckklänning med sidor i grå jersey."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0867.JPG",
+                            "desc": "Mönstrad halterneckklänning med färgade sidor."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0882.JPG",
+                            "desc": "Mönstad kjol."
+                        }
+                    ]
+                },
+                {
+                    "collection": "Höst 2015",
+                    "images": [
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_7641.JPG",
+                            "desc": "Jacka i tvinnat ull och detaljer i gammalt tyg för kuddfodral."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_7477.JPG",
+                            "desc": "Bikerjacka i kostymtyg med mockadetaljer."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0926.JPG",
+                            "desc": "Svart oversize kavaj."
+                        }
+                    ]
+                },
+                {
                     "collection": "Vår 2015",
                     "images": [
                         {
@@ -276,7 +314,7 @@ var TinasApp;
         function ReceptDirective() {
             _super.call(this);
             this.restrict = 'E';
-            this.templateUrl = '/App/Modules/Creative/Recept/Templates/ReceptList.html';
+            this.templateUrl = '/App/Modules/Creative/Recept/Templates/List.html';
         }
         ReceptDirective.prototype.initialize = function (scope, element, attributes) {
             var _this = this;
@@ -596,6 +634,7 @@ var TinasApp;
             var data = this.getData();
             this.setCourseData(data, $scope);
             this.setProjectsData(data, $scope);
+            this.setMeriterData(data, $scope);
             $scope.goToView = function (nr) {
                 _this.goToView(nr);
             };
@@ -604,6 +643,9 @@ var TinasApp;
             };
             $scope.setSelectedProject = function (project, index) {
                 _this.setSelectedProject(project, index, $scope);
+            };
+            $scope.setSelectedMerit = function (project, index) {
+                _this.setSelectedMerit(project, index, $scope);
             };
             $scope.separateProjects = function () {
                 _this.separateProjects($scope);
@@ -615,6 +657,22 @@ var TinasApp;
                 }, 0);
             }, 0);
         }
+        PortfolioController.prototype.setMeriterData = function (data, $scope) {
+            var projs = _.filter(data, function (d) {
+                return d.type == 'meriter';
+            });
+            $scope.meriter = [[], [], []];
+            $scope.columns = ($(window).width() < 768) ? 2 : 4;
+            var rows = Math.ceil(projs.length / $scope.columns);
+            for (var i = 0; i < rows; i++) {
+                $scope.meriter[i] = [];
+                for (var j = 0; j < $scope.columns; j++) {
+                    if (((i * $scope.columns) + j) < projs.length) {
+                        $scope.meriter[i].push(projs[(i * $scope.columns) + j]);
+                    }
+                }
+            }
+        };
         PortfolioController.prototype.setProjectsData = function (data, $scope) {
             var projs = _.filter(data, function (d) {
                 return d.type == 'project';
@@ -728,11 +786,11 @@ var TinasApp;
             });
         };
         PortfolioController.prototype.animateMenuItem = function (index, itemId, enterDuration, leaveDuration) {
-            $("#menu-" + itemId).attr("data-" + (this.keyframes[index] - (enterDuration)), "padding-left:5px;");
-            $("#menu-" + itemId).attr("data-" + (this.keyframes[index]), "padding-left:25px;");
+            $("#menu-" + itemId).attr("data-" + (this.keyframes[index] - (enterDuration)), "padding-left:5px;opacity:0.5;");
+            $("#menu-" + itemId).attr("data-" + (this.keyframes[index]), "padding-left:25px;opacity:1;");
             //animate out
-            $("#menu-" + itemId).attr("data-" + (this.keyframes[(index + 1)] - (leaveDuration)), "padding-left:25px;");
-            $("#menu-" + itemId).attr("data-" + (this.keyframes[(index + 1)]), "padding-left:5px;");
+            $("#menu-" + itemId).attr("data-" + (this.keyframes[(index + 1)] - (leaveDuration)), "padding-left:25px;opacity:1;");
+            $("#menu-" + itemId).attr("data-" + (this.keyframes[(index + 1)]), "padding-left:5px;opacity:0.5;");
         };
         PortfolioController.prototype.initSkrollr = function () {
             //Kollar att skrollr inte redan är definierad
@@ -816,13 +874,27 @@ var TinasApp;
             //    $scope.expandIndex = null;
             //}
         };
+        PortfolioController.prototype.setSelectedMerit = function (project, index, $scope) {
+            $scope.selectedMerit = (!$scope.selectedMerit || project.title != $scope.selectedMerit.title) ? project : null;
+            //if ($scope.selectedProject) {
+            //    var columns = ($(window).width() < 768) ? 2 : 4;
+            //    var rowIndex = Math.floor(index / columns);
+            //    $scope.expandIndex = ((rowIndex + 1) * columns) - 1;
+            //    if (rowIndex == Math.floor($scope.projects.length / columns)) {
+            //        $scope.expandIndex = $scope.projects.length - 1;
+            //    }
+            //}
+            //else {
+            //    $scope.expandIndex = null;
+            //}
+        };
         PortfolioController.prototype.getData = function () {
             var data = [
                 {
                     title: "Design",
                     type: "project",
                     date: "1",
-                    img: ["App/Modules/Portfolio/Education/Content/bob0488.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/bob.png"],
                     shortTitle: "Design",
                     underTitle: "Skolprojekt",
                     x: 50,
@@ -834,7 +906,7 @@ var TinasApp;
                     title: "3D-Datorgrafik",
                     type: "project",
                     date: "2",
-                    img: ["App/Modules/Portfolio/Education/Content/9126_146136472200_3911258_n.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/volksball.png"],
                     shortTitle: "3D-Datorgrafik",
                     underTitle: "Skolprojekt",
                     x: 320,
@@ -846,7 +918,7 @@ var TinasApp;
                     title: "Avancerad Bildbehandling",
                     type: "project",
                     date: "4",
-                    img: ["App/Modules/Portfolio/Education/Content/im8c.jpg", "App/Modules/Portfolio/Education/Content/prickarochbalkar.png", "App/Modules/Portfolio/Education/Content/boundingbox.png", "App/Modules/Portfolio/Education/Content/klarr.png"],
+                    img: ["App/Modules/Portfolio/Education/Content/abob1.png", "App/Modules/Portfolio/Education/Content/abob2.png", "App/Modules/Portfolio/Education/Content/abob3.png", "App/Modules/Portfolio/Education/Content/abob4.png"],
                     shortTitle: "Bildbehandling",
                     underTitle: "Skolprojekt",
                     x: 480,
@@ -858,7 +930,7 @@ var TinasApp;
                     title: "Concept Art",
                     type: "project",
                     date: "2",
-                    img: ["App/Modules/Portfolio/Education/Content/39082_432445227200_533537200_5292360_2457477_n.jpg", "App/Modules/Portfolio/Education/Content/flicka.jpg", "App/Modules/Portfolio/Education/Content/37718_428134417200_533537200_5170752_2208684_n.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/conceptArt1.png", "App/Modules/Portfolio/Education/Content/conceptArt2.png", "App/Modules/Portfolio/Education/Content/conceptArt3.png"],
                     shortTitle: "Concept Art",
                     underTitle: "Skolprojekt",
                     x: 550,
@@ -870,7 +942,7 @@ var TinasApp;
                     title: "Bilddatabaser",
                     type: "project",
                     date: "4",
-                    img: ["App/Modules/Portfolio/Education/Content/intensity_result.jpg", "App/Modules/Portfolio/Education/Content/query1_facit.jpg", "App/Modules/Portfolio/Education/Content/pojke.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/bdb.png", "App/Modules/Portfolio/Education/Content/bdb1.png", "App/Modules/Portfolio/Education/Content/bdb2.png"],
                     shortTitle: "Bilddatabaser",
                     underTitle: "Skolprojekt",
                     x: 677,
@@ -882,7 +954,7 @@ var TinasApp;
                     title: "Agil användbarhetsutveckling för handhållna enheter",
                     type: "project",
                     date: "4",
-                    img: ["App/Modules/Portfolio/Education/Content/221790_10150185773562201_533537200_7281160_4615444_n.jpg", "App/Modules/Portfolio/Education/Content/meny.jpeg", "App/Modules/Portfolio/Education/Content/play1.jpeg", "App/Modules/Portfolio/Education/Content/screenshot2_ena.jpg", "App/Modules/Portfolio/Education/Content/screenshot2_andra.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/peasInWar1.png", "App/Modules/Portfolio/Education/Content/peasInWar2.png", "App/Modules/Portfolio/Education/Content/peasInWar3.png", "App/Modules/Portfolio/Education/Content/peasInWar4.png", "App/Modules/Portfolio/Education/Content/peasInWar5.png", "App/Modules/Portfolio/Education/Content/peasInWar6.png"],
                     shortTitle: "Agil",
                     underTitle: "Skolprojekt",
                     x: 750,
@@ -894,7 +966,7 @@ var TinasApp;
                     title: "Informationsvisualisering",
                     type: "project",
                     date: "3",
-                    img: ["App/Modules/Portfolio/Education/Content/helaprogram.png", "App/Modules/Portfolio/Education/Content/karta.png", "App/Modules/Portfolio/Education/Content/Parallellkoordinate_2004.png", "App/Modules/Portfolio/Education/Content/scatterplot.jpg", "App/Modules/Portfolio/Education/Content/scattermatrix.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/infovis1.png", "App/Modules/Portfolio/Education/Content/infovis2.png", "App/Modules/Portfolio/Education/Content/infovis3.png", "App/Modules/Portfolio/Education/Content/infovis4.png", "App/Modules/Portfolio/Education/Content/infovis5.png", "App/Modules/Portfolio/Education/Content/infovis6.png", "App/Modules/Portfolio/Education/Content/infovis7.png"],
                     shortTitle: "InfoVis",
                     underTitle: "Skolprojekt",
                     x: 810,
@@ -906,7 +978,7 @@ var TinasApp;
                     title: "3D-datorgrafik i 3D-Studio Max",
                     type: "project",
                     date: "3",
-                    img: ["App/Modules/Portfolio/Education/Content/render01.jpg", "App/Modules/Portfolio/Education/Content/render02.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/3d1.png", "App/Modules/Portfolio/Education/Content/3d.png"],
                     shortTitle: "3D-Studio Max",
                     underTitle: "Skolprojekt",
                     x: 820,
@@ -918,7 +990,7 @@ var TinasApp;
                     title: "Grafisk Design och Kummunikation",
                     type: "project",
                     date: "4",
-                    img: ["App/Modules/Portfolio/Education/Content/sidan.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/design.png"],
                     shortTitle: "Grafisk Design",
                     underTitle: "Skolprojekt",
                     x: 950,
@@ -930,7 +1002,7 @@ var TinasApp;
                     title: "Teknisk projektledning för Audiovisuell Medieproduktion",
                     type: "project",
                     date: "4",
-                    img: ["App/Modules/Portfolio/Education/Content/logga.png", "App/Modules/Portfolio/Education/Content/black.png", "App/Modules/Portfolio/Education/Content/Logga1.jpg", "App/Modules/Portfolio/Education/Content/black1.png", "App/Modules/Portfolio/Education/Content/black8.png", "App/Modules/Portfolio/Education/Content/black2.png", "App/Modules/Portfolio/Education/Content/black6.png", "App/Modules/Portfolio/Education/Content/black3.png"],
+                    img: ["App/Modules/Portfolio/Education/Content/black1.png", "App/Modules/Portfolio/Education/Content/black2.png", "App/Modules/Portfolio/Education/Content/black3.png", "App/Modules/Portfolio/Education/Content/black4.png", "App/Modules/Portfolio/Education/Content/black5.png", "App/Modules/Portfolio/Education/Content/black6.png", "App/Modules/Portfolio/Education/Content/black7.png", "App/Modules/Portfolio/Education/Content/black8.png"],
                     shortTitle: "Medieproduktion",
                     underTitle: "Skolprojekt",
                     x: 1210,
@@ -942,13 +1014,13 @@ var TinasApp;
                     title: "Examensarbete",
                     type: "project",
                     date: "5",
-                    img: ["App/Modules/Portfolio/Education/Content/sida1_1.png", "App/Modules/Portfolio/Education/Content/sida1.png", "App/Modules/Portfolio/Education/Content/Sida2.jpg", "App/Modules/Portfolio/Education/Content/sida2_1.png", "App/Modules/Portfolio/Education/Content/sida2_2.png", "App/Modules/Portfolio/Education/Content/sida2_3.png"],
+                    img: ["App/Modules/Portfolio/Education/Content/blog1.png", "App/Modules/Portfolio/Education/Content/blog2.png", "App/Modules/Portfolio/Education/Content/blog3.png", "App/Modules/Portfolio/Education/Content/blog4.png", "App/Modules/Portfolio/Education/Content/blog5.png", "App/Modules/Portfolio/Education/Content/blog6.png", "App/Modules/Portfolio/Education/Content/blog7.png", "App/Modules/Portfolio/Education/Content/blog8.png", "App/Modules/Portfolio/Education/Content/blog9.png", "App/Modules/Portfolio/Education/Content/blog10.png"],
                     shortTitle: "Examensarbete",
                     underTitle: "Skolprojekt",
                     x: 1320,
                     y: 140,
                     thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/twingly.png",
-                    description: "Jag fick i uppdrag av Twingly att skapa en webbaserad applikation för att visualisera bloggstatistik i relation till en specifik blogg. Programmet har som syfte att ge Bloggportalens användare feed-back över bloggens trafik och aktivitet och därmed öka engagemang och länkande hos bloggarna.</br></br> I oktober 2013 belönades mitt arbete med Kaperos stipendium för Sveriges bästa exjobb inom medieteknik.",
+                    description: "Jag fick i uppdrag av Twingly att skapa en webbaserad applikation för att visualisera bloggstatistik i relation till en specifik blogg. Programmet har som syfte att ge Bloggportalens användare feed-back över bloggens trafik och aktivitet och därmed öka engagemang och länkande hos bloggarna. <br /> <br /> I oktober 2013 belönades mitt arbete med Kaperos stipendium för Sveriges bästa exjobb inom medieteknik.",
                     rapportLink: "http://liu.diva-portal.org/smash/record.jsf?pid=diva2:623128",
                     demoLink: "/bloggportalen-stat/Main/main.html"
                 },
@@ -956,19 +1028,19 @@ var TinasApp;
                     title: "Medietekniks PR-utskott",
                     type: "meriter",
                     date: "1",
-                    img: ["App/Modules/Portfolio/Education/Content/medieteknik.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/MT.PNG"],
                     shortTitle: "PR-utskottet",
                     underTitle: "Övriga meriter",
                     x: 400,
                     y: 80,
-                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                     description: "Medlem. Hjälpte till i pr-arbetet för Medietekniksektionen bland annat med att informera om event samt att göra reklam för medietekniks sektionsmedlemmar."
                 },
                 {
                     title: "Civilingenjörerna i Norrköpings studentförening, 3Cant (08/09)",
                     type: "meriter",
                     date: "2",
-                    img: ["App/Modules/Portfolio/Education/Content/IMG_1151.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/3cant.png"],
                     shortTitle: "3Cant",
                     underTitle: "Övriga meriter",
                     x: 150,
@@ -980,7 +1052,7 @@ var TinasApp;
                     title: "Medietekniks Sektionsstyrelse (08/09)",
                     type: "meriter",
                     date: "2",
-                    img: ["App/Modules/Portfolio/Education/Content/medieteknik.jpg", "App/Modules/Portfolio/Education/Content/P1010309.jpg", "App/Modules/Portfolio/Education/Content/tina_stor.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/MT.PNG", "App/Modules/Portfolio/Education/Content/mt2.png", "App/Modules/Portfolio/Education/Content/mt1.png"],
                     shortTitle: "MT-styrelsen",
                     underTitle: "Övriga meriter",
                     x: 400,
@@ -992,7 +1064,7 @@ var TinasApp;
                     title: "Medietekniks tjejförening, Mette (08/09)",
                     type: "meriter",
                     date: "2",
-                    img: ["App/Modules/Portfolio/Education/Content/Mettemarket.png"],
+                    img: ["App/Modules/Portfolio/Education/Content/mette.png"],
                     shortTitle: "Mette",
                     underTitle: "Övriga meriter",
                     x: 250,
@@ -1004,7 +1076,7 @@ var TinasApp;
                     title: "Mottagningskommittén för tekniskt basår (09/10)",
                     type: "meriter",
                     date: "3",
-                    img: ["App/Modules/Portfolio/Education/Content/torsten.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/skurk.png"],
                     shortTitle: "Mottagningskommittén",
                     underTitle: "Övriga meriter",
                     x: 550,
@@ -1016,7 +1088,7 @@ var TinasApp;
                     title: "Norrlands Nation, Vargtass (09/10)",
                     type: "meriter",
                     date: "3",
-                    img: ["App/Modules/Portfolio/Education/Content/affisch2.jpg", "App/Modules/Portfolio/Education/Content/502738.jpg", "App/Modules/Portfolio/Education/Content/underbart.jpg", "App/Modules/Portfolio/Education/Content/vargtassvanster.jpg", "App/Modules/Portfolio/Education/Content/vagtasshoger.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/vargtass.png", "App/Modules/Portfolio/Education/Content/vargtass1.png", "App/Modules/Portfolio/Education/Content/vargtass2.png", "App/Modules/Portfolio/Education/Content/vargtass3.png", "App/Modules/Portfolio/Education/Content/vargtass4.png"],
                     shortTitle: "Vargtass",
                     underTitle: "Övriga meriter",
                     x: 480,
@@ -1028,7 +1100,7 @@ var TinasApp;
                     title: "Designuppdrag Sunset Sailors",
                     type: "meriter",
                     date: "5",
-                    img: ["App/Modules/Portfolio/Education/Content/sun.jpg"],
+                    img: ["App/Modules/Portfolio/Education/Content/sunsetSailors.png"],
                     shortTitle: "Designuppdrag",
                     underTitle: "Övriga meriter",
                     x: 942,
@@ -1040,7 +1112,7 @@ var TinasApp;
                     title: "Revisor för Norrlands Nation, Vargtass",
                     type: "meriter",
                     date: "4",
-                    img: ["App/Modules/Portfolio/Education/Content/vagtass.png"],
+                    img: ["App/Modules/Portfolio/Education/Content/vargtass.png"],
                     shortTitle: "Vargtass",
                     underTitle: "Övriga meriter",
                     x: 480,
@@ -1052,13 +1124,25 @@ var TinasApp;
                     title: "IT-supportansvarig, extrajobb på Twingly",
                     type: "meriter",
                     date: "5",
-                    img: ["App/Modules/Portfolio/Education/Content/twingly-logotype21.png"],
+                    img: ["App/Modules/Portfolio/Education/Content/twingly.png"],
                     shortTitle: "Twingly",
                     underTitle: "Övriga meriter",
                     x: 480,
                     y: 60,
                     thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/vargtass.png",
-                    description: "Extrajobb på Twingly AB i Linköping. Hade ansvar för IT-supporten knuten både till Bloggportalen.se och Twinglys bloggindexeringsverktyg. Detta innebar både support för Twinglys kunder (där ibland Aftonbladet, Adlibris och DN samt olika bloggbevakningsföretag) men även nära kontakt och support med bloggarna. </br></br> Arbetetsuppgifterna bestod oftast av att felsöka pingprocessen (då blogginlägg indexeras), se över bloggarnas RSS-flöden, åtgärda spamrapportering och hjälpa till med bloggarnas användarprofiler på Bloggportalen."
+                    description: "Extrajobb på Twingly AB i Linköping. Hade ansvar för IT-supporten knuten både till Bloggportalen.se och Twinglys bloggindexeringsverktyg. Detta innebar både support för Twinglys kunder (där ibland Aftonbladet, Adlibris och DN samt olika bloggbevakningsföretag) men även nära kontakt och support med bloggarna. <br> <br> Arbetetsuppgifterna bestod oftast av att felsöka pingprocessen (då blogginlägg indexeras), se över bloggarnas RSS-flöden, åtgärda spamrapportering och hjälpa till med bloggarnas användarprofiler på Bloggportalen."
+                },
+                {
+                    title: "Basketkarriären",
+                    type: "meriter",
+                    date: "5",
+                    img: ["App/Modules/Portfolio/Education/Content/basket1.png", "App/Modules/Portfolio/Education/Content/basket3.png"],
+                    shortTitle: "Basket",
+                    underTitle: "Övriga meriter",
+                    x: 480,
+                    y: 60,
+                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/vargtass.png",
+                    description: "Jag började spela basket när jag var 9 år och när jag var 16 började jag spela på allsvensk nivå. Under min första tid på universitetet spelade jag i Norrköping Dolphins division1-lag. Även om jag aldrig var en betald spelare så är basketspelet en av mina viktigaste meriter och kanske det som format mig mest. Både i lagarbete, ledarskap, fysisk och psykisk träning men framför allt hur jag fungerar när jag misslyckas, hur jag värderar mig själv och mina egna prestationer och hur jag balanserar press från mig själv och andra."
                 },
                 {
                     title: "Bildbehandling och bildanalys (Matlab)",
@@ -1069,7 +1153,7 @@ var TinasApp;
                     shortTitle: "Bildbehandling",
                     x: 720,
                     y: 0,
-                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                     description: "Kursens syfte är att ge en teoretisk och praktisk grund för datoriserad bearbetning och analys av digitala bilder."
                 },
                 {
@@ -1081,7 +1165,7 @@ var TinasApp;
                     shortTitle: "Modelleringsprojekt",
                     x: 620,
                     y: 0,
-                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                     description: "En dynamisk modell ska skapas för ett utvalt projektobjekt. Genom simulering med hjälp av modellen ska objektet studeras dynamiskt. Rapportskrivning och muntlig presentation på svenska."
                 },
                 {
@@ -1093,7 +1177,7 @@ var TinasApp;
                     shortTitle: "Användargräsnitt",
                     x: 500,
                     y: 10,
-                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                     description: "Kursen syftar till att ge studenterna grundläggande kännedom om kognitiva processer och interatkiva datorsystem samt kunskaper om principer, metoder och verktyg för att utveckla datorsystem anpassade till användaren. "
                 },
                 {
@@ -1105,7 +1189,7 @@ var TinasApp;
                     img: ["App/Modules/Portfolio/Education/Content/mt_thumb.png"],
                     x: 810,
                     y: 40,
-                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                     description: "Kursen syftar till att ge fördjupade insikter i metoder för visualisering av vetenskapliga data från experiment och beräkningar samt genom programmeringsövningar belysa dessa metoders möjligheter och begränsningar. "
                 },
                 {
@@ -1117,7 +1201,7 @@ var TinasApp;
                     img: ["App/Modules/Portfolio/Education/Content/mt_thumb.png"],
                     x: 657,
                     y: 10,
-                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/mt.png",
+                    thumbNail: "App/Modules/Portfolio/Education/Content/ThumbNails/MT.PNG",
                     description: "Målet med kursen är att studenterna skall få insikt i vad VR är, hur det används och hur det kan implementeras och utnyttjas. De skalläven lära sig analysera behov och utmaningar, och lära sig att tillämpa teorier och principer för att realisera effektiva VR-gränssnitt och -interaktion. "
                 },
                 {
@@ -1619,6 +1703,8 @@ var TinasApp;
             controller: TinasApp.PortfolioController.factory()
         }).when('/Portfolio/CareerLog', {
             templateUrl: 'App/Modules/Portfolio/CareerLog/Templates/CareerLog.html'
+        }).when('/Portfolio/CareerLog/ITBehoverOlika', {
+            templateUrl: 'App/Modules/Portfolio/CareerLog/Templates/ITBehoverOlika.html'
         }).when('/Social', {
             templateUrl: 'App/Modules/Social/Templates/Social.html'
         });
@@ -1948,19 +2034,32 @@ var TinasApp;
         }
         ImageCarouselDirective.prototype.initialize = function ($scope, element, attributes) {
             var _this = this;
-            console.log("image carosuel");
+            $scope.activate = true;
             $scope.id = attributes.uniqId;
+            $("#" + $scope.id).carousel();
+            $scope.imageObjects = [];
+            _.map($scope.images, function (img) {
+                $scope.imageObjects.push({
+                    "img": img,
+                    "active": null,
+                    "direction": null
+                });
+            });
             $scope.previous = function () { return _this.previous($scope); };
             $scope.next = function () { return _this.next($scope); };
             $scope.selectedIndex = 0;
         };
         ImageCarouselDirective.prototype.previous = function ($scope) {
             $scope.selectedIndex--;
-            console.log("previus");
+            $("#" + $scope.id).carousel('prev');
+            //$scope.images[$scope.selectedIndex].active(true);
         };
         ImageCarouselDirective.prototype.next = function ($scope) {
             $scope.selectedIndex++;
             console.log("next");
+            $scope.imageObjects[$scope.selectedIndex].active = true;
+            $scope.imageObjects[$scope.selectedIndex].direction = 'next';
+            // (<any>$("#" + $scope.id)).carousel('next');
         };
         return ImageCarouselDirective;
     })(TinasApp.BaseDirective);

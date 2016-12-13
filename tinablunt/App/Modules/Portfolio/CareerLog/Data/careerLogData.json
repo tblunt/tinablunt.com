@@ -178,13 +178,77 @@
         "content": "East sweden hack är ett stort event för hela region Östergötland där 20 stycken uttagna lag tävlar i att bygga en digital lösning på en intensiv helg. I år handlade det om att ta användning av internet of things och öppna datakällor och på så sätt lösa ett vardagsproblem eller helt enkelt bara förgylla vardagen.<br><br>Som ordförande i priskategorin för bästa användarupplevelse ville jag hitta det lag som hade satt användaren först. Både i gränssnittet men även i själva resan genom hela upplevelsen. <br><br> Det laget som gjorde det bäst var Tellipark som hade skapat ett system för att förboka och onlinebetala parkeringsplatser samt registrering på plats både när man anländer samt lämnar sin plats. Jäkligt bra jobbat och en väldigt bra lösning på ett relevant vardagsproblem.",
         "img": [ ]
     },
-     {
+    {
         "date": "2015-11-02",
         "tags": "projekt",
         "link": "",
         "header": "Inspirationsföreläser för studerande IT-tjejer.",
         "content": "Jag fick chansen och den stora äran att få komma och prata framför en massa IT-studerande tjejer i Linköping. Jag ville få dom att tänka till. Bryta betéenden som jag vet att jag själv hade och som jag förlorade extremt mycket på. Men främst av allt ville jag att dom skulle gå därifrån med blicken framåt, huvudet högt och fulla med pepp!<br><br> <a href='/#/Portfolio/CareerLog/ITBehoverOlika'>Läs föreläsningen här<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a>",
-        "img": ["/App/Modules/Portfolio/CareerLog/Content/ITOlika/Slide1.png"]
+        "img": [ "/App/Modules/Portfolio/CareerLog/Content/ITOlika/Slide1.png" ]
+    },
+     {
+        "date": "2015-12-07",
+        "tags": "projekt",
+        "link": "",
+        "header": "Rumsbokningen klar.",
+        "content": "Sanktkors är en stor fastighetsägare i Linköping skulle göra om sin hemsida. De insåg ganska sent i den processen att de även skulle vilja digitalisera och uppdatera sättet man bokar allmänna lokaler i företagsparkerna. Vi fick några få veckor på oss att skissa fram och utveckla ett webbaserat boknigssystem som synkar emot användarkonton i office365 samt fungerar på Sanktkors nya wordpress-sida.<br><br>På grund av den extremt tajta dead-linen blev jag satt själv på front-end-sidan för att kunna ta vissa genvägar (och för att jag är js-ninja) från hur vi normalt utvecklar i projekt när vi är fler, med planeringar, skissöverlämningar, avstämningar osv. Jag skrev rumsbokningen som en wordpress-plugin som integrerar med Office365 och ett eget API. Jag använde mig av moment.js som är ett javascript-bibliotek för att hantera tid och datum, angular, less och html såklart.<br><br> Efter några veckors intenstivt köttande (hittar inget bättre ord för att beskriva den tiden) installerade vi rumsbokningen på den nylanserade wordpress-siten. Succée! ",
+        "img": [ "/App/Modules/Portfolio/CareerLog/Content/Rumsbokning1.png","/App/Modules/Portfolio/CareerLog/Content/Rumsbokning2.png"]
+    },
+    {
+        "date": "2016-02-26",
+        "tags": "projekt",
+        "link": "",
+        "header": "Spelar in podcast med Östsvenska Handelskammaren om webbtrender.",
+        "content": "Jag har under våren drivit projektet med att skapa ny hemsida till Östsvenska Handelskammaren. Detta gav inspiration till en nya podcast i Handelskammarens podkanal. Ett trevligt snack om både strategiska trender men även om vad som är hett rent grafiskt och stilmässigt. Vi grundade till exempel den nya finsk/svenska staden ”Parallax scroll” norr om Haparanda. <br><br> <a href='http://ostsvenskahandelskammaren.libsyn.com/avsnitt-15-mera-webb' target='_blank'>Lyssna här<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a>",
+        "img": [ "/App/Modules/Portfolio/CareerLog/Content/pod.jpg" ]
+    },
+     {
+        "date": "2016-03-07",
+        "tags": "projekt",
+        "link": "",
+        "header": "Kriminalvårdens frivårdsapp uppmärksammas.",
+        "content": "Jag har under våren jobbat väldigt mycket med att ta fram UX och koncept för en ny app som Kriminalvården håller på att ta fram. Appens syfte är att underlätta för klienter inom Frivården där mycket av innehållet grundar i KBT, psykologiska motivationsdrivare och ren digitalisering av material och mötesbokningar. Det är ett extremt spännande projekt där vi verkligen fått gått till botten med krav, behov, kartläggning av målgrupp, omvärldsanalyser och betéendevetenskapliga grunder för hur vi kan motivera klienter där motivationen ofta tryter. <br><br> Kriminalvårdens generaldirektör Nils Öberg skriver om bland annat den här frivårdsappen i <a href='http://mobil.dn.se/debatt/kort-fangelsestraff-ger-ofta-inte-det-basta-resultatet/' target='_blank'>DN debatt<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a> och även Aftonbladet tar upp appen i <a href='http://www.aftonbladet.se/nyheter/article22481806.ab' target='_blank'>en artikel<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a>",
+        "img": [ "/App/Modules/Portfolio/CareerLog/Content/Krim-app-mockup-1.png", "/App/Modules/Portfolio/CareerLog/Content/Krim-app-mockup-2.png" ]
+    },
+    {
+        "date": "2016-04-04",
+        "tags": "projekt",
+        "link": "",
+        "header": "Östsvenska Handelskammaren går live.",
+        "content": "Östsvenska Handelskammaren ville uppdatera sin hemsida och skickade ut offertförfrågan till ett tiotal byråer i regionen. Jag fick projektet internt på Gaia redan i denna fas. Mycket offertskrivande, UX-utvärdering och skissande senare så valde Handelskammaren oss för att utföra projektet. Jag gick in som teknisk projektledare, utvecklare och webbdesigner för att skapa upp hemsidan i wordpress med två tillhörande dottersidor (ostlänken och 100-listan).  <br><br>För första gången har jag varit med hela vägen från insälj, planering, beredning, utveckling till publicering och nu förvaltning, vilket har varit jätteroligt. Att dessutom få hela ansvaret, både tekniskt och designmässigt, och att projektleda andra är även det kul och som ett naturligt steg vidare för mig och min egen utveckling. Jag är jättenöjd med resultatet som jag och mitt team har tryck ut. <br><br> <a href='http://www.ostsvenskahandelskammaren.se/' target='_blank'>Handelskammaren<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a><br><br> <a href='http://www.ostsvenskahandelskammaren.se/esic' target='_blank'>Ostlänken (esic)<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a> <br><br> <a href='http://www.ostsvenskahandelskammaren.se/100-listan' target='_blank'>100-listan<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a>",
+        "img": ["/App/Modules/Portfolio/CareerLog/Content/oshk1.png", "/App/Modules/Portfolio/CareerLog/Content/oshk2.png"]
+    },
+    {
+        "date": "2016-04-06",
+        "tags": "projekt",
+        "link": "",
+        "header": "Jag föreläser på MTD 2016.",
+        "content": "Jag fick frågan om att föreläsa på MTD för Gaias räkning. Jag fick i princip fria händer och valde då att gå ifrån den vanliga företagspresentationen som ingen vill lyssna på ändå. Jag brinner mycket för att göra IT-branchen mer varierad. Den är extremt homogen idag och peroner som är mitt uppe i den världen förstår ofta inte hur mycket den exkluderar andra. Andra som verkligen verkligen behövs! Jag vill att folk ska öppna sina ögon för hur normer, invanda betéenden och oskrivna lagar kan pajja för så många. <br><br>Så det valde jag att prata om.<br><br>En skön reaktion på detta hade ju egentligen varit att studenterna bara satt och suckade i sina stolar för att dom för länge sedan har förstått detta. Men reaktionerna var de motsatta. Det blev ett himla kramkalas från både studenter och kollegor i branchen. Personer som behövde höra detta. Personer, både killar och tjejer, som befinner sig på båda sidorna av dessa normer och oskrivna lagar. <br><br> Jag har heft liknande föreläsning innan som du kan läsa om här: <a href='/#/Portfolio/CareerLog/ITBehoverOlika'>IT behöver olika!<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></a>",
+        "img": ["/App/Modules/Portfolio/CareerLog/Content/mtd2016.jpg"]
+    },
+    {
+        "date": "2016-04-14",
+        "tags": "projekt",
+        "link": "",
+        "header": "From business to buttons.",
+        "content": "Jag fick åka och inspireras på stora UX-konferensen From Business to Buttons tillsammans med en massa andra användbarhetsdesigner. Det blev två extremt inspirerande och givande dagar med flera workshop och föreläsningar. Bland annat föreläste Facebooks produktdesignchef och strategen för UX-design på Google, såväl som en doktor i psykologi och en forskare i beteendevetenskap (the moder of UX!) - vilket sedan toppades med en föreläsning av den forne amerikanske vice presidenten Al Gore.",
+        "img": ["/App/Modules/Portfolio/CareerLog/Content/algore.jpg"  ]
+    },
+    {
+        "date": "2016-05-03",
+        "tags": "projekt",
+        "link": "",
+        "header": "UX-föreläser",
+        "content": "På Gaia håller vi ibland föreläsningar för kunder och kollegor. Både för att kompetenssprida internt och för att öka förståelse hos kunder till varför de behöver viss kompentens eller bredda sig åt något håll.<br><br>Jag samlade mina kunskaper om UX och förmedlade så mycket av det som jag hann med. Allt från att klargöra begrepp, gå igenom stegen i vår UX-process, hjärnans olika funktioner och begränsningar till vad som instinktivt driver oss till engegemang. Väldigt uppskattat och kul!",
+        "img": [ "/App/Modules/Portfolio/CareerLog/Content/uxModellen4.png" ]
+    },
+     {
+        "date": "2016-05-03",
+        "tags": "projekt",
+        "link": "",
+        "header": "Utbildad i kundresekartor",
+        "content": "Kundresekartor eller Customer Journey Maps är ett kraftfullt verktyg som man ofta använder inom UX. Det handlar om att kartlägga behov, brister, beteenden och flöden för en kund som nyttjar en tjänst eller kommer i kontakt med ett företag. Det handlar om att skaffa sig en bild av en hel kundupplevelse för att kunna förbättra den. Kartan är värdefull för att kunna hitta smarta UX-lösningar och även kunna komunicera behovet av dem till de som ska betala för dem. En jättebra kurs som verkligen har adderat ett vertyg i min UX-verktygslåda.",
+        "img": []
     }
     
      

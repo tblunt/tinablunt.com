@@ -32,18 +32,24 @@ module TinasApp {
             this.getData('https://api.instagram.com/v1/users/33200675/media/recent/?access_token=33200675.054f33d.4d1b7684b9e8404eac2ad2f309d2c77d&count=20',(d) => {
                
                 scope.instaImages = d.data;
+               
                 this.next_url = d.pagination.next_url;
+               
+                getting = false;
                 scope.$apply();
              
             });
 
             $(window).on('scroll',() => {
                
-                if ($(window).scrollTop() + $(window).height() > $(".ngview").height() - 5) {
-                    if (!getting) {
+                if ($(window).scrollTop() + $(window).height() > $(".ngview").height() - 200) {
+                    if (!getting) {                        
                         getting = true;
+                        
                         this.getData(this.next_url,(d) => {
+                         
                             getting = false;
+                           
                             scope.instaImages = scope.instaImages.concat(d.data);
                             this.next_url = d.pagination.next_url;
                             scope.$apply();
@@ -79,17 +85,13 @@ module TinasApp {
                     if (callback)
                         callback(data);
                 },
-                error: function (data) {
-                    console.log("error");
-                    console.log(data);
+                error: function (data) {;
                 }
             });
         }
 
         private instastart(array, scope) {
-            console.log(array);
             scope.instaImages = angular.copy(array);
-
         }
 
       

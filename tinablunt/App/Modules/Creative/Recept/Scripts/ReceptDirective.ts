@@ -17,7 +17,7 @@ module TinasApp {
             super();
 
             this.restrict = 'E';
-            this.templateUrl = '/App/Modules/Creative/Recept/Templates/ReceptList.html';
+            this.templateUrl = '/App/Modules/Creative/Recept/Templates/List.html';
         }
 
         public initialize(scope: IReceptDirectiveScope, element: JQuery, attributes: ng.IAttributes): void {

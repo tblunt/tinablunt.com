@@ -43,7 +43,6 @@
 
 
     function startGame() {
-        console.log("start game animate gubbe");
 
         // create a new stage and point it at our canvas:
         stage = new createjs.Stage(canvas);

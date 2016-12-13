@@ -22,7 +22,7 @@ module TinasApp {
         public initialize(scope: IClothesDirectiveScope, element: JQuery, attributes: ng.IAttributes): void {
             scope.setSelectedImage = (img) => this.setSelectedImage(img, scope);
             scope.imgData = this.getImageData();
-            console.log(scope.imgData);
+           
         }
 
         private setSelectedImage(imgSrc, scope: IClothesDirectiveScope) {
@@ -31,6 +31,54 @@ module TinasApp {
 
         private getImageData() {
             return [
+                {
+                    "collection": "Höst 2016",
+                    "images": [
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/klannig.jpg",
+                            "desc": "Min 30års-klänning i bomullstyg från Marimekko."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_1.jpg",
+                            "desc": "Väska"
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_2.jpg",
+                            "desc": "Jacka i tvinnat ull"
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_3.jpg",
+                            "desc": "Klänning gjord av två bordsdukar och bumullstyg"
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_9259.JPG",
+                            "desc": "Kjol i bomullstyg från Marimekko."
+                        }
+
+                    ]
+                },
+                {
+                    "collection": "Vår 2016",
+                    "images": [
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0890.JPG",
+                           "desc": "Min första väska någonsin. Kashmir, matt-tyg, tvinnat ull och fuskskinn."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0887.JPG",
+                            "desc": "Svart halterneckklänning med sidor i grå jersey."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0867.JPG",
+                            "desc": "Mönstrad halterneckklänning med färgade sidor."
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0882.JPG",
+                            "desc": "Mönstad kjol."
+                        }
+
+                    ]
+                },
                 {
                     "collection": "Höst 2015",
                     "images": [
@@ -41,7 +89,11 @@ module TinasApp {
                         {
                             "src": "App/Modules/Creative/Content/Clothes/IMG_7477.JPG",
                             "desc": "Bikerjacka i kostymtyg med mockadetaljer."
-                        }                       
+                        },
+                        {
+                            "src": "App/Modules/Creative/Content/Clothes/IMG_0926.JPG",
+                            "desc": "Svart oversize kavaj."
+                        }                        
 
                     ]
                 },

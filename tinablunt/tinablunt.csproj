@@ -60,6 +60,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Application.js" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_0867.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_0882.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_0887.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_0890.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_0926.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_1.jpg" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_2.jpg" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_3.jpg" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_5418.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_5425.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_5428.JPG" />
@@ -67,8 +75,12 @@
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_6850.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_7477.JPG" />
     <Content Include="App\Modules\Creative\Content\Clothes\IMG_7641.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\IMG_9259.JPG" />
+    <Content Include="App\Modules\Creative\Content\Clothes\klannig.jpg" />
+    <Content Include="App\Modules\Creative\Recept\Templates\List.html" />
     <Content Include="App\Modules\Hej\Content\english.svg" />
     <Content Include="App\Modules\Hej\Content\swedish.svg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\algore.jpg" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\are1.jpg" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\are2.jpg" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\are3.jpg" />
@@ -95,12 +107,22 @@
     <Content Include="App\Modules\Portfolio\CareerLog\Content\ITOlika\Slide3.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\ITOlika\Slide4.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\ITOlika\Slide5.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Krim-app-mockup-1.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Krim-app-mockup-2.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\link1.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\link2.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\link3.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\link6.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\link9.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\mtd2016.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\mtdfilm.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\oshk1.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\oshk2.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\pod.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Rumsbokning1.png" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\Rumsbokning2.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Content\schneidercity.jpg" />
+    <Content Include="App\Modules\Portfolio\CareerLog\Content\uxModellen4.png" />
     <Content Include="App\Modules\Portfolio\CareerLog\Templates\ITBehoverOlika.html" />
     <Content Include="App\Modules\Portfolio\Education\Content\3cant.png" />
     <Content Include="App\Modules\Portfolio\Education\Content\3d.png" />
@@ -268,7 +290,6 @@
     <Content Include="App\Modules\Creative\Recept\Images\food.svg" />
     <Content Include="App\Modules\Creative\Recept\Images\soup.svg" />
     <Content Include="App\Modules\Creative\Recept\Recept.html" />
-    <Content Include="App\Modules\Creative\Recept\Templates\ReceptList.html" />
     <Content Include="App\Modules\Creative\Templates\Creative.html" />
     <Content Include="App\Modules\Header\Content\art.svg" />
     <Content Include="App\Modules\Header\Content\briefcase.svg" />

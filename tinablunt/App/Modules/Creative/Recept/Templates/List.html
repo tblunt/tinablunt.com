@@ -1,0 +1,36 @@
+﻿<div class="row">
+    <h5 class="ingress">Nej, jag tycker tyvärr inte supermycket om att laga mat men jag gillar att äta. Den här sidan är mest till för mig själv för att jag ska kunna hålla koll på mina favvisar. Man får sno om man vill.</h5>
+</div>
+
+<div ng-repeat="receptKategori in recepts"
+     class="row">
+    <div class="header-wrapper">
+        <h4>{{receptKategori.title}}</h4>
+    </div>
+    <div ng-repeat="recept in receptKategori.items"
+         class="tumme"
+         ng-class="{'col-md-12': selectedRecept.title == recept.title, 'col-md-3': selectedRecept.title != recept.title, 'expanded': selectedRecept.title == recept.title }"
+         ng-click="receptClick(recept)">
+        <div class="tumme-content">
+            <img ng-src="App/Modules/Creative/Recept/Images/{{receptKategori.icon}}.svg" />
+            <h5>{{recept.title}}</h5>
+
+            <div ng-show="selectedRecept.title == recept.title"
+                 class="details">
+                <div ng-if="recept.ingress" class="ingress"><p>{{recept.ingress}}</p></div>
+                <div ng-if="recept.ing" class="ing">
+                    <div ng-repeat="ing in recept.ing">
+                        <img ng-src="App/Modules/Creative/Recept/Images/{{receptKategori.icon}}.svg" />
+                        <p>{{ing}}</p>
+                    </div>
+                </div>
+                <p class="description" ng-if="recept.desc">
+                    {{recept.desc}}
+                </p>
+                <div ng-if="recept.link" class="link">
+                    <a href="{{recept.link}}" target="_blank">{{recept.link}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
